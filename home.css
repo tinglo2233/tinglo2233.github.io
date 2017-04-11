@@ -386,6 +386,7 @@ h2 {
 .about-bg {
     background-image: url("img/about.JPG");
     background-attachment: fixed;
+    background-color: #f3f6fd;
 }
 
 .music-bg {
@@ -393,24 +394,28 @@ h2 {
     background-size: cover;
     background-position: right;
     background-attachment: fixed;
+    background-color: #f1f0ec;
 }
 
 .videos-bg {
     background-image: url("img/videos.jpg");
     background-position: right;
     background-attachment: fixed;
+    background-color: #030303;
 }
 
 .events-bg {
     background-image: url("img/events.jpg");
     background-size: cover;
     background-position: right;
+    background-color: #190b0a;
 }
 
 .contact-bg {
     background-image: url("img/contact.JPG");
     background-size: cover;
     background-position: center;
+    background-color: #ccd9e2;
 }
 
 .menu-content {

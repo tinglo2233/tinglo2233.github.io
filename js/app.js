@@ -58,9 +58,10 @@ $(function() {
         });*/
         
         window.stage = stage;
-        contentView.setTimeout(function() {
-            contentView.scrollTo(0);
-        }, 0);
+        contentView.scrollTop();    
+        //contentView.delay(1).queue(function() {
+        //    contentView.scrollTop();
+        //});
     }
     
     
