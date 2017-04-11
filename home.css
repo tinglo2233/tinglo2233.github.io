@@ -557,7 +557,7 @@ h2 {
 .events-what {
     font-family: badscript;
     text-align-last: right;
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 5rem;
 }
 
@@ -594,4 +594,7 @@ h2 {
 
 .event {
     margin-bottom: 30px;
+}
+.event:empty {
+    min-height: 100px;
 }
