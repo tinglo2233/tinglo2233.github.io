@@ -559,6 +559,30 @@ h2 {
     margin-top: 10vh;
 }
 
+#events-special-title {
+    font-family: fredericka;
+    font-size: 42px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+#events-special-info {
+    margin-top: 1rem;
+}
+
+#events-special-description {
+    font-family: benchnine;
+    font-size: 24px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.events-special {
+    font-family: benchnine;
+    font-size: 30px;
+    color: var(--lighter);
+}
+
 .events-what {
     font-family: badscript;
     text-align-last: right;
@@ -585,6 +609,22 @@ h2 {
     width: 100%;
     background-color: var(--lighter);
     margin-top: -10px;
+}
+
+#events-special-container {
+    margin-top: 20vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 10vh;
+    /*position: relative;*/
+    align-content: center;
+    text-align: center;
+    text-align-last: center;
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--lighter);
+    box-shadow: rgb(255, 255, 255) 0px 0px 1px;
 }
 
 .events-container{
