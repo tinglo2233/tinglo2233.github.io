@@ -41,6 +41,7 @@
     --darker: rgb(62, 117, 130);
     --lighter: rgb(199, 229, 237);
     --transparent: rgba(255,255,255,128);
+    --transparent-totally: rgba(255,255,255,0);
 }
 
 
@@ -65,6 +66,23 @@ a:hover {
     color: var(--darker);
     text-align-last: left;
     text-align: justify;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+	
+	animation-name: fade-in-about-content;
+	animation-duration: 0.69s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forward;
+}
+
+@keyframes fade-in-about-content {
+	from {
+		color: var(--transparent-totally);
+		text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	}
+	to {
+		color: var(--darker);
+		text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+	}
 }
 
 
@@ -229,7 +247,7 @@ h2 {
     #contact-content {
         padding-left: 15vw;
         padding-right: 15vw;
-        padding-top: 30vh;
+        padding-top: 15vh;/*30vh;*/
         padding-bottom: 15vh;
     }
     .about-bg {
@@ -327,6 +345,18 @@ h2 {
         width: 50vw;
         height: 28vw;
     }
+	#facebook-container {
+		align-content: center;
+        min-height: 100%;
+        min-height: 100vh;
+		/*min-width: 340px;*/
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		margin-left: 1vh;
+		margin-right: 1vh;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 @media(min-width: 992px) {

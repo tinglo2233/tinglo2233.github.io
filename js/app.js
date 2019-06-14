@@ -62,6 +62,12 @@ $(function() {
         //contentView.delay(1).queue(function() {
         //    contentView.scrollTop();
         //});
+
+		
+
+		if (stage == "events") {
+			setTimeout(FB.XFBML.parse,1000);
+		}
     }
     
     
