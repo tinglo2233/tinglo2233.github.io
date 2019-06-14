@@ -4,9 +4,11 @@ $(function() {
 	window.stage = "";
     window.stageInfos = [];
     
-    var stageNames = ["about", "music", "videos", "events", "contact"];
+    var stageNames = ["about", "music", "videos", "events"];
     var stageMap = {};
     var contentView = $("#content-div");
+	var fbContainer = $("#facebook-container");
+	var fbIframe = $(".fb-page");
     
     for (let i = 0; i < stageNames.length; ++i) {
         let name = stageNames[i];
@@ -65,10 +67,21 @@ $(function() {
 
 		
 
-		if (stage == "events") {
-			setTimeout(FB.XFBML.parse,1000);
+		if (FB && stage == "events") {
+			ShowFacebook();
+			//setTimeout(ShowFacebook,512);
+		}
+		else {
+			fbContainer.addClass("hidden");
 		}
     }
+
+	function ShowFacebook() {
+		fbContainer.removeClass("hidden");
+		fbIframe.attr("data-width", fbContainer.width());
+		fbIframe.attr("data-height", Math.floor(fbContainer.height()));
+		FB.XFBML.parse();
+	}
     
     
     window.setStage("about");

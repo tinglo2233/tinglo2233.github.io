@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: londrina;
-    src: url(fonts/LondrinaShadow-Regular.ttf);
+    src: url(fonts/Merriweather-Bold.ttf);
 }
 
 @font-face {
@@ -223,7 +223,7 @@ h2 {
 }
 
 @media(max-width: 768px) {
-    /* Smaller */
+    /* Phone */
     body {
         overflow-y: scroll;
     }
@@ -286,6 +286,27 @@ h2 {
         width: 62vw;
         height: 35vw;
     }
+	#facebook-container {
+		align-content: center;
+        min-height: 100%;
+        min-height: 100vh;
+		/*min-width: 340px;*/
+		padding-top: 3vh;
+		padding-bottom: 3vh;
+	}
+	#events-special-container {
+		margin-top: 5vh;
+		margin-bottom: 10vh;
+		/*position: relative;*/
+		align-content: center;
+		text-align: center;
+		text-align-last: center;
+		border-radius: 0px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: var(--lighter);
+		box-shadow: rgb(255, 255, 255) 0px 0px 1px;
+	}
 }
 
 @media(min-width: 768px) {
@@ -350,12 +371,23 @@ h2 {
         min-height: 100%;
         min-height: 100vh;
 		/*min-width: 340px;*/
-		margin-top: 2vh;
-		margin-bottom: 2vh;
-		margin-left: 1vh;
-		margin-right: 1vh;
-		padding-left: 0;
-		padding-right: 0;
+		padding-top: 3vh;
+		padding-bottom: 3vh;
+	}
+	#events-special-container {
+		margin-top: 20vh;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		margin-bottom: 10vh;
+		/*position: relative;*/
+		align-content: center;
+		text-align: center;
+		text-align-last: center;
+		border-radius: 0px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: var(--lighter);
+		box-shadow: rgb(255, 255, 255) 0px 0px 1px;
 	}
 }
 
@@ -639,22 +671,6 @@ h2 {
     width: 100%;
     background-color: var(--lighter);
     margin-top: -10px;
-}
-
-#events-special-container {
-    margin-top: 20vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-bottom: 10vh;
-    /*position: relative;*/
-    align-content: center;
-    text-align: center;
-    text-align-last: center;
-    border-radius: 0px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--lighter);
-    box-shadow: rgb(255, 255, 255) 0px 0px 1px;
 }
 
 .events-container{
