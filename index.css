@@ -3,7 +3,7 @@
  */
 @font-face {
     font-family: merriweather;
-    src: url(fonts/Merriweather-Regulat.ttf);
+    src: url(fonts/Merriweather-Bold.ttf);
 }
 
 
@@ -16,7 +16,7 @@
 a,
 a:focus,
 a:hover {
-  color: #000;
+  color: #545454;
   text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ body {
   background-color: #e1e1e1;
   margin: 0;
   overflow: hidden;
-  color: #000;
+  color: #545454;
   text-align: left;
   vertical-align: center;
     

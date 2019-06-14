@@ -4,7 +4,7 @@ $(function() {
 	window.stage = "";
     window.stageInfos = [];
     
-    var stageNames = ["about", "music", "videos", "events", "contact"];
+    var stageNames = ["about", "music", "videos", "events"];
     var stageMap = {};
     var contentView = $("#content-div");
     
