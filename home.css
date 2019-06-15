@@ -244,20 +244,14 @@ h2 {
     .cover-container {
         min-height: auto;
     }
-    #contact-content {
-        padding-left: 15vw;
-        padding-right: 15vw;
-        padding-top: 15vh;/*30vh;*/
-        padding-bottom: 15vh;
-    }
     .about-bg {
         background-size: auto 140vh;
         background-position: -155vw -10vh;
     }
-    .videos-bg {
+    .projects-bg {
         background-size: cover;
     }
-    .events-bg {
+    .news-bg {
         background-attachment: fixed;
     }
     .events-what {
@@ -282,17 +276,19 @@ h2 {
     #music-content {
         margin-left: 3vw;
     }
-    #videos-content iframe {
+    #projects-content iframe {
         width: 62vw;
         height: 35vw;
     }
 	#facebook-container {
-		align-content: center;
+		align-content: right;
         min-height: 100%;
         min-height: 100vh;
 		/*min-width: 340px;*/
 		padding-top: 3vh;
 		padding-bottom: 3vh;
+		padding-right: 3vh;
+		padding-left: 3vh;
 	}
 	#events-special-container {
 		margin-top: 5vh;
@@ -327,12 +323,6 @@ h2 {
         padding-right: 7vw;
         padding-top: 20%;
     }
-    #contact-content {
-        padding-left: 16vw;
-        padding-right: 16vw;
-        padding-top: 37vh;
-        padding-bottom: 30vh;
-    }
     .cover-container {
         min-height: 100vh;
     }
@@ -340,7 +330,7 @@ h2 {
         background-size: cover;
         background-position: right;
     }
-    .videos-bg {
+    .projects-bg {
         background-size: 108vw;
     }
     .events-what {
@@ -362,7 +352,7 @@ h2 {
         font-size: 42px;
         margin-top: 6vh;
     }
-    #videos-content iframe {
+    #projects-content iframe {
         width: 50vw;
         height: 28vw;
     }
@@ -459,25 +449,18 @@ h2 {
     background-color: #f1f0ec;
 }
 
-.videos-bg {
-    background-image: url("img/videos.jpg");
+.projects-bg {
+    background-image: url("img/projects.jpg");
     background-position: right;
     background-attachment: fixed;
     background-color: #030303;
 }
 
-.events-bg {
-    background-image: url("img/events.jpg");
+.news-bg {
+    background-image: url("img/news.jpg");
     background-size: cover;
     background-position: right;
     background-color: #190b0a;
-}
-
-.contact-bg {
-    background-image: url("img/contact.JPG");
-    background-size: cover;
-    background-position: center;
-    background-color: #ccd9e2;
 }
 
 .menu-content {
@@ -494,50 +477,6 @@ h2 {
     -webkit-box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
     text-shadow: 0 .05rem .1rem var(--lighter);
-}
-
-#contact-inner {
-    font-family: benchnine-bold;
-    font-size: 32px;
-    color: var(--darker);
-}
-
-#contact-inner input {
-    background-color: var(--lighter);
-    min-height: 4rem;
-    border: 0;
-    padding: 0.5rem;
-    padding-left: 1rem;
-}
-
-#contact-inner textarea {
-    margin-bottom: 3rem;
-    background-color: var(--lighter);
-    border: 0;
-    min-height: 20rem;
-}
-
-#contact-inner button {
-    text-align: center;
-    min-width: 8rem;
-    border: 0;
-    min-height: 4rem;
-    height: 55px;
-    margin-top: -1px;
-    background-color: var(--darker);
-    color: var(--lighter);
-}
-
-#contact-inner button p {
-    text-align-last: center;
-    margin: auto;
-    display: block;
-}
-
-#contact-inner button:hover,
-#contact-inner button:focus {
-    color: var(--darker);
-    background-color: var(--lighter);
 }
 
 .placeholder-color::-webkit-input-placeholder {
@@ -593,7 +532,7 @@ h2 {
     margin-left: 1rem;
     min-height: 50px;
 }
-#videos-content {
+#projects-content {
     display: block;
     margin-top: 6rem;
     align-content: center;
@@ -602,13 +541,13 @@ h2 {
     text-align-last: center;
 }
 
-#videos-content iframe {
+#projects-content iframe {
     margin-bottom: 6rem;
     display: inline-block;
     float: center;
 }
 
-#videos-content div {
+#projects-content div {
     display: inline-block;
     align-content: center;
     text-align: center;
@@ -674,9 +613,7 @@ h2 {
 }
 
 .events-container{
-    margin-top: 10vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
+	padding-top: 3vh;
     position: relative;
     align-content: center;
     text-align: center;

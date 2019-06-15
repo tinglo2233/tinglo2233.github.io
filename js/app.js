@@ -4,7 +4,7 @@ $(function() {
 	window.stage = "";
     window.stageInfos = [];
     
-    var stageNames = ["about", "music", "videos", "events"];
+    var stageNames = ["about", "music", "projects", "news"];
     var stageMap = {};
     var contentView = $("#content-div");
 	var fbContainer = $("#facebook-container");
@@ -67,7 +67,7 @@ $(function() {
 
 		
 
-		if (FB && stage == "events") {
+		if (FB != null && stage == "news") {
 			ShowFacebook();
 			//setTimeout(ShowFacebook,512);
 		}
@@ -83,13 +83,25 @@ $(function() {
 		FB.XFBML.parse();
 	}
     
-    
-    window.setStage("about");
-    
     // Preload bg images
     var bgImages = [];
     for (let i = 0; i < stageNames.length; ++i) {
         bgImages.push(new Image());
         bgImages[i].src = "img/"+stageNames[i]+".jpg";
     }
+    
+	var wantedLandingStage = "about";
+
+	//console.log(window.location);
+	//console.log(window.location.href);
+	//console.log(document.URL);
+	if (URLSearchParams) {
+		var url = new URL (window.location);
+		var urlParameters = new URLSearchParams(url.search);
+
+		for (var i = 0; i < stageNames.length; ++i) {
+			if (urlParameters.has(stageNames[i])) wantedLandingStage = stageNames[i];
+		}
+	}
+    window.setStage(wantedLandingStage);
 });

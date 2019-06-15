@@ -66,21 +66,20 @@ h1:focus {
  * Base structure
  */
 html {
-  height: 100%;
+	height: 100%;
 }
 body {
-  background-image: url(img/title.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-  min-height: 100%;
-  background-color: #e1e1e1;
-  margin: 0;
-  overflow: hidden;
-  color: #545454;
-  text-align: left;
-  vertical-align: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	min-height: 100%;
+	background-color: #e1e1e1;
+	margin: 0;
+	overflow: hidden;
+	color: #545454;
+	text-align: left;
+	vertical-align: center;
     
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+	text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
 .title-content:focus,
@@ -90,7 +89,7 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 2rem;
+	padding: 2rem;
 }
 
 .content-inner {
@@ -112,6 +111,9 @@ body {
 
 @media(max-width: 768px) {
     /* Phone */
+	body {
+		background-image: url(img/title_small.jpg);
+	}
     .title-content {
         margin: auto;
     }
@@ -131,6 +133,9 @@ body {
 
 @media(min-width: 768px) {
     /* Desktop */
+	body {
+		background-image: url(img/title.jpg);
+	}
     .title-content {
         margin-left:70%;
     }
