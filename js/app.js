@@ -7,6 +7,7 @@ $(function() {
     var stageNames = ["about", "music", "projects", "news"];
     var stageMap = {};
     var contentView = $("#content-div");
+    var menuView = $("#menu-div");
 	var fbContainer = $("#facebook-container");
 	var fbIframe = $(".fb-page");
     
@@ -51,6 +52,8 @@ $(function() {
         
         contentView.removeClass(window.stage+"-bg");
         contentView.addClass(stage+"-bg");
+        menuView.removeClass(window.stage+"-menu-bg");
+        menuView.addClass(stage+"-menu-bg");
         
         // pause youtube videos
         /*stageMap["videos"].content.find("iframe").each(function () {
@@ -60,6 +63,7 @@ $(function() {
         });*/
         
         window.stage = stage;
+		location.hash = stage;
         contentView.scrollTop();    
         //contentView.delay(1).queue(function() {
         //    contentView.scrollTop();
@@ -67,20 +71,30 @@ $(function() {
 
 		
 
-		if (FB != null && stage == "news") {
+		if (stage == "news") {
 			ShowFacebook();
 			//setTimeout(ShowFacebook,512);
 		}
-		else {
-			fbContainer.addClass("hidden");
-		}
     }
 
+	var lastFbWidth = 0;
+	var lastFbHeight = 0;
 	function ShowFacebook() {
-		fbContainer.removeClass("hidden");
-		fbIframe.attr("data-width", fbContainer.width());
-		fbIframe.attr("data-height", Math.floor(fbContainer.height()));
-		FB.XFBML.parse();
+		if (typeof(FB) != 'undefined'&& FB != null )
+		{
+			var fbWidth = Math.floor(fbContainer.width());
+			var fbHeight = Math.floor(fbContainer.height());
+
+			if (fbWidth  != lastFbWidth || fbHeight != lastFbHeight) {
+				fbIframe.attr("data-width", fbWidth);
+				fbIframe.attr("data-height", fbHeight);
+				FB.XFBML.parse();
+				lastFbWidth = fbWidth;
+				lastFbHeight = fbHeight;
+			}
+		} else {
+			setTimeout(ShowFacebook,256);
+		}
 	}
     
     // Preload bg images
@@ -92,16 +106,11 @@ $(function() {
     
 	var wantedLandingStage = "about";
 
-	//console.log(window.location);
-	//console.log(window.location.href);
-	//console.log(document.URL);
-	if (URLSearchParams) {
-		var url = new URL (window.location);
-		var urlParameters = new URLSearchParams(url.search);
-
-		for (var i = 0; i < stageNames.length; ++i) {
-			if (urlParameters.has(stageNames[i])) wantedLandingStage = stageNames[i];
-		}
+	var currentHash = location.hash;
+	currentHash = currentHash.substr(1, currentHash.length - 1);
+	console.log(currentHash);
+	for (var i = 0; i < stageNames.length; ++i) {
+		if (stageNames[i] == currentHash) wantedLandingStage = stageNames[i];
 	}
     window.setStage(wantedLandingStage);
 });

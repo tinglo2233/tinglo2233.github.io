@@ -435,6 +435,7 @@ h2 {
     }
 }
 
+/* content background images */
 .about-bg {
     background-image: url("img/about.JPG");
     background-attachment: fixed;
@@ -463,6 +464,38 @@ h2 {
     background-color: #190b0a;
 }
 
+/* left menu background images */
+/*
+.about-menu-bg {
+    background-image: url("img/about.JPG");
+    background-attachment: fixed;
+    background-color: #f3f6fd;
+}
+
+.music-menu-bg {
+    background-image: url("img/music.jpg");
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    background-color: #f1f0ec;
+}
+
+.projects-menu-bg {
+    background-image: url("img/projects.jpg");
+    background-position: right;
+    background-attachment: fixed;
+    background-color: #030303;
+}
+
+.news-menu-bg {
+    background-image: url("img/news.jpg");
+    background-size: cover;
+    background-position: right;
+    background-color: #190b0a;
+}
+*/
+
+/*   */
 .menu-content {
     padding: 2rem;
     display: flex;
