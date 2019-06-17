@@ -40,8 +40,10 @@
 :root {
     --darker: rgb(62, 117, 130);
     --lighter: rgb(199, 229, 237);
+    --lighter-transparent: rgba(199, 229, 237, 0.5);
     --transparent: rgba(255,255,255,128);
     --transparent-totally: rgba(255,255,255,0);
+    --almost-transparent: rgba(199, 229, 237, 0.1);
 }
 
 
@@ -115,17 +117,9 @@ body {
 }
 
 .col-content {
-    background-color: #111;
+    background-color: var(--transparent-totally);
     overflow-y: scroll;
 }
-
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-
-.cover-container {
-    background-color: var(--lighter);
-}
-
 
 /* Padding for spacing */
 
@@ -228,7 +222,6 @@ h2 {
         overflow-y: scroll;
     }
     .col-content {
-        background-color: #111;
         overflow-y: visible;
         height: 100%;
         
@@ -245,15 +238,18 @@ h2 {
         min-height: auto;
     }
     .about-bg {
-        background-size: auto 140vh;
-        background-position: -155vw -10vh;
+        background-position: -130vw 0vh;
     }
-    .projects-bg {
-        background-size: cover;
-    }
-    .news-bg {
-        background-attachment: fixed;
-    }
+	.news-bg {
+		background-position: 0vw top;
+		background-size: cover;
+	}
+	.projects-bg {
+		background-size: cover;
+	}
+	.music-bg {
+		background-position: 120vw center;
+	}
     .events-what {
         font-size: 32px;
         margin-top: 8px;
@@ -311,7 +307,6 @@ h2 {
         overflow-y: hidden;
     }
     .col-content {
-        background-color: #111;
         overflow-y: scroll;
         height: 100vh;
         
@@ -327,12 +322,18 @@ h2 {
         min-height: 100vh;
     }
     .about-bg {
-        background-size: cover;
-        background-position: right;
+        background-position: center -7vh;
     }
-    .projects-bg {
-        background-size: 108vw;
-    }
+	.music-bg {
+		background-position: right -20vh;
+	}
+	.news-bg {
+		background-position: left top;
+		background-size: contain;
+	}
+	.projects-bg {
+		background-size: contain;
+	}
     .events-what {
         font-size: 36px;
         margin-top: 8px;
@@ -419,10 +420,6 @@ h2 {
         margin-right: 5vh;
         margin-top: -5vh;
     }
-    .about-bg {
-        background-size: 110vw;
-        background-position: right 0vh;
-    }
     h1 {
         font-size: 64px;
     }
@@ -440,58 +437,47 @@ h2 {
     background-image: url("img/about.JPG");
     background-attachment: fixed;
     background-color: #f3f6fd;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .music-bg {
     background-image: url("img/music.jpg");
     background-size: cover;
-    background-position: right;
     background-attachment: fixed;
     background-color: #f1f0ec;
 }
 
 .projects-bg {
     background-image: url("img/projects.jpg");
-    background-position: right;
+	background-repeat: no-repeat;
+    background-position: left top;
     background-attachment: fixed;
-    background-color: #030303;
+    background-color: #5f5e4a;
 }
 
 .news-bg {
     background-image: url("img/news.jpg");
-    background-size: cover;
-    background-position: right;
-    background-color: #190b0a;
+	background-repeat: no-repeat;
+    background-color: #100d08;
+    background-attachment: fixed;
 }
 
-/* left menu background images */
-
+/*left menu background */
 .about-menu-bg {
-    background-image: url("img/about.JPG");
-    background-attachment: fixed;
-    background-color: #f3f6fd;
+    background-color: var(--lighter-transparent);
 }
 
 .music-menu-bg {
-    background-image: url("img/music.jpg");
-    background-size: cover;
-    background-position: right;
-    background-attachment: fixed;
-    background-color: #f1f0ec;
+    background-color: var(--lighter-transparent);
 }
 
 .projects-menu-bg {
-    background-image: url("img/projects.jpg");
-    background-position: right;
-    background-attachment: fixed;
-    background-color: #030303;
+    background-color: var(--almost-transparent);
 }
 
 .news-menu-bg {
-    background-image: url("img/news.jpg");
-    background-size: cover;
-    background-position: right;
-    background-color: #190b0a;
+    background-color: var(--almost-transparent);
 }
 
 

@@ -10,6 +10,7 @@ $(function() {
     var menuView = $("#menu-div");
 	var fbContainer = $("#facebook-container");
 	var fbIframe = $(".fb-page");
+	var body = $("#bg-root");
     
     for (let i = 0; i < stageNames.length; ++i) {
         let name = stageNames[i];
@@ -50,8 +51,8 @@ $(function() {
             }
 		}
         
-        contentView.removeClass(window.stage+"-bg");
-        contentView.addClass(stage+"-bg");
+        body.removeClass(window.stage+"-bg");
+        body.addClass(stage+"-bg");
         menuView.removeClass(window.stage+"-menu-bg");
         menuView.addClass(stage+"-menu-bg");
         
@@ -65,6 +66,9 @@ $(function() {
         window.stage = stage;
 		location.hash = stage;
         contentView.scrollTop();    
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
         //contentView.delay(1).queue(function() {
         //    contentView.scrollTop();
         //});
