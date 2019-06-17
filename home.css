@@ -182,15 +182,14 @@ body {
     min-height: 70px;
     left: 0;
     height: 7vh;
-    background-color: var(--darker);
     align-content: right;
     align-items: right;
     
-    -webkit-box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5), 0 -5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
+    /*-webkit-box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5), 0 -5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5), 0 -5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
 
 
-	/*background-image: url("img/yentinglo.png");
+	background-image: url("img/yentinglo.png");
     background-repeat: no-repeat;
     background-size: contain;
 	background-position: right 10px center;*/
