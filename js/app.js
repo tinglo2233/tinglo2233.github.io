@@ -5,6 +5,7 @@ $(function() {
     window.stageInfos = [];
     
     var stageNames = ["about", "music", "projects", "news"];
+    var stageHasSideInfo = {"about": true, "music": true, "projects": false, "news": false};
     var stageMap = {};
     var contentView = $("#content-div");
     var menuView = $("#menu-div");
@@ -40,12 +41,15 @@ $(function() {
             let content = window.stageInfos[i].content;
 			
 			if (name == stage) {
-                view.removeClass("hidden");
+				if (stageHasSideInfo[stage]) {
+					view.removeClass("hidden");
+				}
                 content.removeClass("hidden");
                 button.addClass("active");
             }
 			else {
-                view.addClass("hidden");
+				if (!view.hasClass("hidden"))
+					view.addClass("hidden");
                 content.addClass("hidden");
                 button.removeClass("active");
             }
