@@ -40,6 +40,7 @@
 :root {
     --darker: rgb(62, 117, 130);
     --lighter: rgb(199, 229, 237);
+    --lighter-transparent: rgba(199, 229, 237, 128);
     --transparent: rgba(255,255,255,128);
     --transparent-totally: rgba(255,255,255,0);
 }
