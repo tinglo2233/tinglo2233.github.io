@@ -1,43 +1,51 @@
 // This code loads the IFrame Player API code asynchronously.
-//var tag = document.createElement('script');
+var tag = document.createElement('script');
 
-//tag.src = "https://www.youtube.com/iframe_api";
-//var firstScriptTag = document.getElementsByTagName('script')[0];
-//firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
 var ytPlayers = {};
 function onYouTubeIframeAPIReady() {
-	console.log("hello youtube");
+	console.log("youtube api loaded");
 	ytPlayers["strings"] = new YT.Player('strings-iframe', {
-		listType: 'playlist',
-		list: 'PLjd2GXZgLHfQoco2vfF0VxVsydX3Xc6Kn',
-		enablejsapi: 1
-
-		/*height: '390',
-		width: '640',
-		videoId: 'M7lc1UVf-VE',
+		origin: "https://yentinglo.net",
 		events: {
-			'onReady': onPlayerReady,
-			'onStateChange': onPlayerStateChange
-		}*/
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
 	});
 	ytPlayers["offscore"] = new YT.Player('offscore-iframe', {
-		listType: 'playlist',
-		list: 'PLjd2GXZgLHfRwOLh_R7wkPachGP9N-tCb',
-		enablejsapi: 1
+		origin: "https://yentinglo.net",
+		events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
 	});
 	ytPlayers["originals"] = new YT.Player('originals-iframe', {
-		listType: 'playlist',
-		list: 'PLjd2GXZgLHfSm-sCS-PXkb-UndpZ_JyMC',
-		enablejsapi: 1
+		origin: "https://yentinglo.net",
+		events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
 	});
 	ytPlayers["standards"] = new YT.Player('standards-iframe', {
-		listType: 'playlist',
-		list: 'PLjd2GXZgLHfR6prtzs7rSOtFwd6Nm5Dks',
-		enablejsapi: 1
+		origin: "https://yentinglo.net",
+		events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
 	});
+}
+
+function onPlayerReady() {
+	console.log("yt-player ready");
+}
+
+function onPlayerStateChange(s) {
+	console.log(s);
 }
 
 $(function() {
@@ -176,9 +184,8 @@ $(function() {
                 button.addClass("hidden");
 			}
 
-			let iframePlayer = ytPlayers[name];
-			if (iframePlayer != null) {
-				iframePlayer.pauseVideo();
+			if (ytPlayers[name] != null) {
+				if (ytPlayers[name].pauseVideo) ytPlayers[name].pauseVideo();
 			}
 		}
 
