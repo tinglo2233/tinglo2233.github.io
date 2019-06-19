@@ -8,180 +8,212 @@ $(function () {
     b.setAttribute('data-useragent', navigator.userAgent);
     b.setAttribute('data-platform', navigator.platform);
     
-    var playlistNames = ["songwriting", "tetrapod", "duo", "band"];
+    var playlistNames = ["strings", "offscore", "other", "standards"];
     var playlists = {
-        "songwriting" : [
+        "strings" : [
             {
-                "name": "The 5 Min In Between",
-                "length": "00:57",
-                "file": "songwriting/5min"
+                "name": "Waltz of Color 本色示人",
+                "file": "strings/waltz of color"
             },
             {
-                "name": "Absinthe  (Theme of movie 'Double Date')",
-                "length": "00:57",
-                "file": "songwriting/Absinthe"
+                "name": "Foreshore",
+                "file": "strings/foreshore"
             },
             {
-                "name": "I Fall Asleep Too Easily",
+                "name": "The extra 5 min 多出來的這五分鐘",
                 "length": "00:57",
-                "file": "songwriting/Fall Asleep"
+                "file": "strings/5min"
             },
             {
-                "name": "雨樹澄黃",
+                "name": "Epiphyllum",
                 "length": "00:57",
-                "file": "songwriting/Golden shower tree"
+                "file": "strings/epiphyllum"
             },
             {
-                "name": "Beer and Gossip",
+                "name": "Lucid Dreaming 清醒夢",
                 "length": "00:57",
-                "file": "songwriting/Beer and Gossip"
+                "file": "strings/lucid"
             },
             {
-                "name": "Street Carol",
+                "name": "Cassia Fistula 雨樹澄黃",
                 "length": "00:57",
-                "file": "songwriting/Street Carol"
-            },
-            {
-                "name": "畢業序曲",
-                "length": "00:57",
-                "file": "songwriting/Graduation overture"
-            },
-            {
-                "name": "Sweetest Single Valentine",
-                "length": "00:57",
-                "file": "songwriting/Sweetest single valentine"
-            },
-            {
-                "name": "Tromsø Sky (ft. CvA Jazz Choir)",
-                "length": "00:57",
-                "file": "songwriting/Tromso Sky"
-            },
-            {
-                "name": "Leaving",
-                "length": "00:57",
-                "file": "songwriting/leaving"
+                "file": "strings/cassia string"
             }
         ],
-        "tetrapod" : [
+        "offscore" : [
             {
                 "name": "Copy Machine",
                 "length": "00:32",
-                "file": "tetrapod/Copy Machine"
+                "file": "offscore/copy machine"
             },
             {
-                "name": "Garlic Skin",
+                "name": "My Late-coming Puberty",
                 "length": "00:34",
-                "file": "tetrapod/Garlic Skin"
+                "file": "offscore/puberty"
             },
             {
                 "name": "Elephants Remember",
                 "length": "00:30",
-                "file": "tetrapod/Elephants remember"
+                "file": "offscore/elephants"
             },
             {
                 "name": "Cicada and Banyan Tree",
                 "length": "00:34",
-                "file": "tetrapod/Cicada and Banyan Tree"
+                "file": "offscore/cicada"
+            },
+            {
+                "name": "Relativity",
+                "length": "00:34",
+                "file": "offscore/relativity"
             }
         ],
-        "duo" : [
+        "other" : [
             {
-                "name": "Easy Living",
+                "name": "Leave Me Be (ft. CvA Tuesday Big Band)",
                 "length": "00:30",
-                "file": "duo/Easy living"
+                "file": "other/leave me be"
             },
             {
-                "name": "The Song Is You",
+                "name": "Space Colonization Fantasia (ft. CvA Tuesday Big Band)",
                 "length": "00:57",
-                "file": "duo/The Song Is You"
+                "file": "other/space colonization"
             },
              {
-                "name": "Speak Low",
-                "length": "00:57",
-                "file": "duo/Speak low"
+                "name": "Absinthe  (Theme of movie 'Double Date')",
+                "file": "other/Absinthe"
             },
             {
-                "name": "God Bless The Child",
-                "length": "00:57",
-                "file": "duo/God bless the child"
-            },
-            {
-                "name": "Love For Sale",
-                "length": "00:57",
-                "file": "duo/Love For Sale_1"
-            },
-            {
-                "name": "Alone Together",
-                "length": "00:57",
-                "file": "duo/Alone Together"
-            },
-            {
-                "name": "Joy Spring",
-                "length": "00:40",
-                "file": "duo/Joy Spring"
-            },
-            {
-                "name": "Darn That Dream",
-                "length": "00:57",
-                "file": "duo/Darn That dream"
-            },
-            {
-                "name": "Falsa Baiana",
+                "name": "Garlic Skin",
                 "length": "00:30",
-                "file": "duo/Falsa Baiana1"
+                "file": "other/Garlic Skin"
             },
             {
-                "name": "Skylark",
+                "name": "畢業序曲",
                 "length": "00:57",
-                "file": "duo/Skylark"
-            }            
+                "file": "other/Graduation overture"
+            },
+            {
+                "name": "I Fall Asleep Too Easily",
+                "length": "00:57",
+                "file": "other/Fall Asleep"
+            },
+            {
+                "name": "Cassia Fistula",
+                "length": "00:57",
+                "file": "other/Cassia Fistula"
+            },
+            {
+                "name": "Another Voyage",
+                "length": "00:30",
+                "file": "other/Another Voyage"
+            }, 
+            {
+                "name": "Beer and Gossip",
+                "length": "00:57",
+                "file": "other/Beer and Gossip"
+            },
+            {
+                "name": "Tromsø Sky",
+                "length": "00:57",
+                "file": "other/Tromso Sky"
+            },
+            {
+                "name": "Street Carol",
+                "length": "00:57",
+                "file": "other/Street Carol"
+            },
+            {
+                "name": "Sweetest Single Valentine",
+                "length": "00:57",
+                "file": "other/Sweetest single valentine"
+            },
+            {
+                "name": "Leaving",
+                "length": "00:57",
+                "file": "other/leaving"
+            }
         ],
-        "band" : [
+        "standards" : [
             {
                 "name": "I've Got You Under My Skin (ft. KoSwing Big Band)",
                 "length": "00:34",
-                "file": "band/I've got you under my skin"
+                "file": "standards/I've got you under my skin"
             },
             {
                 "name": "Hi Fly",
                 "length": "00:32",
-                "file": "band/Hi Fly"
+                "file": "standards/Hi Fly"
             },
             {
                 "name": "The Boy Next Door",
                 "length": "00:34",
-                "file": "band/The Boy Next Door"
+                "file": "standards/The Boy Next Door"
             },
             {
                 "name": "Night And Day (ft. Taipei Riot Big Band)",
                 "length": "00:30",
-                "file": "band/Night and Day"
+                "file": "standards/Night and Day"
             },
             {
                 "name": "On A Clear Day",
                 "length": "00:34",
-                "file": "band/On a Clear Day"
+                "file": "standards/On a Clear Day"
             },
             {
                 "name": "Cry Me a River",
                 "length": "00:34",
-                "file": "band/Cry me a River"
+                "file": "standards/Cry me a River"
             },
             {
                 "name": "Se Todos Fossem Iguais A Você",
                 "length": "00:32",
-                "file": "band/Se Todos Voce"
+                "file": "standards/Se Todos Voce"
             },
             {
                 "name": "On The Sunny Side Of The Street (ft. KoSwing Big Band)",
                 "length": "00:30",
-                "file": "band/Sunnyside of the Street"
+                "file": "standards/Sunnyside of the Street"
             },
             {
                 "name": "I'll Remember April",
                 "length": "00:30",
-                "file": "band/I'll remember april"
-            } 
+                "file": "standards/I'll remember april"
+            },
+            {
+                "name": "God Bless The Child",
+                "length": "00:34",
+                "file": "standards/God bless the child"
+            },
+            {
+                "name": "Sous Le Ciel de Paris",
+                "length": "00:34",
+                "file": "standards/sous le ciel"
+            },
+            {
+                "name": "Speak Low",
+                "length": "00:30",
+                "file": "standards/Speak low"
+            },
+            {
+                "name": "Love For Sale",
+                "length": "00:34",
+                "file": "standards/Love For Sale"
+            },
+            {
+                "name": "Easy Living",
+                "length": "00:32",
+                "file": "standards/Easy living"
+            },
+            {
+                "name": "Skylark",
+                "length": "00:30",
+                "file": "standards/Skylark"
+            },
+            {
+                "name": "The Song Is You",
+                "length": "00:30",
+                "file": "standards/the song is you"
+            }  
         ]
     };
     
