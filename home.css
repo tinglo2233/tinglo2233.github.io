@@ -13,8 +13,8 @@
 }
 
 @font-face {
-    font-family: benchnine-bold;
-    src: url(fonts/BenchNine-Bold.ttf);
+    font-family: Merriweather-Light;
+    src: url(fonts/Merriweather-Light.ttf);
 }
 
 @font-face {
@@ -66,9 +66,9 @@ a:hover {
 }
 
 #about-content p {
-    font-family: Lora-Regular;
+    font-family: Merriweather-LightItalic;
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     text-align-last: left;
     text-align: left;
 }
