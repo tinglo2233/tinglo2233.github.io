@@ -3,8 +3,8 @@
  */
 
 @font-face {
-    font-family: londrina;
-    src: url(fonts/Merriweather-Bold.ttf);
+    font-family: Merriweather-LightItalic;
+    src: url(fonts/Merriweather-LightItalic.ttf);
 }
 
 @font-face {
@@ -18,8 +18,13 @@
 }
 
 @font-face {
-    font-family: wireone;
-    src: url(fonts/WireOne.ttf);
+    font-family: lora-italic;
+    src: url(fonts/Lora-Italic.ttf);
+}
+
+@font-face {
+    font-family: Lora-Regular;
+    src: url(fonts/Lora-Regular.ttf);
 }
 
 @font-face {
@@ -59,7 +64,7 @@ a:hover {
 }
 
 #menu-bar p {
-    font-family: wireone;
+    font-family: badscript;
     color: var(--darker);
     text-align-last: left;
     text-align: justify;
@@ -196,8 +201,8 @@ body {
 }
 
 h2 {
-    font-family: badscript;
-    font-size: 40px;
+    font-family: Merriweather-LightItalic;
+    font-size: 35px;
     text-align: left;
 }
 
@@ -207,7 +212,7 @@ h2 {
     text-align: justify;
     font-size: 22px;
     color: var(--darker);
-    text-shadow: 0 .05rem .1rem var(--darker);
+    text-shadow: 0 .05rem .1rem var(--lighter);
 }
 
 @media(max-width: 768px) {
@@ -578,8 +583,8 @@ h2 {
 }
 
 #events-special-title {
-    font-family: fredericka;
-    font-size: 42px;
+    font-family: Lora-Regular;
+    font-size: 25px;
     margin-bottom: 3rem;
     margin-top: 3rem;
 }
@@ -589,15 +594,15 @@ h2 {
 }
 
 #events-special-description {
-    font-family: benchnine;
-    font-size: 24px;
+    font-family: Lora-Regular;
+    font-size: 22px;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .events-special {
-    font-family: benchnine;
-    font-size: 30px;
+    font-family: Lora-Regular;
+    font-size: 22px;
     color: var(--lighter);
 }
 
@@ -608,20 +613,21 @@ h2 {
     margin-bottom: 5rem;
 }
 
+
 .events-when {
-    font-family: benchnine;
-    font-size: 30px;
+    font-family: Lora-Regular;
+    font-size: 15px;
     color: var(--lighter);
     text-align-last: left;
 }
 
 .events-where {
-    font-family: benchnine;
-    font-size: 30px;
+    font-family: Lora-Regular;
+    font-size: 15px;
     color: var(--lighter);
     text-align-last: left;
 }
-
+/*
 .line {
     min-height: 2px;
     width: 100%;
