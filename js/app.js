@@ -199,6 +199,8 @@ $(function() {
 		}
 
 		window.project = project;
+		if (project != null)
+			location.hash = project;
 	}
 
 	var lastFbWidth = 0;
@@ -228,14 +230,35 @@ $(function() {
         bgImages[i].src = "img/"+stageNames[i]+".jpg";
     }
     
-	var wantedLandingStage = aboutStage;
 
-	var currentHash = location.hash;
-	currentHash = currentHash.substr(1, currentHash.length - 1);
-	for (var i = 0; i < stageNames.length; ++i) {
-		if (stageNames[i] == currentHash) wantedLandingStage = stageNames[i];
+	window.onhashchange = function (){
+		var wantedLandingStage = null;
+		var wantedProject = null;
+		var currentHash = location.hash;
+		currentHash = currentHash.substr(1, currentHash.length - 1);
+		for (var i = 0; i < stageNames.length; ++i) {
+			if (stageNames[i] == currentHash) {
+				wantedLandingStage = stageNames[i];
+				break;
+			}
+		}
+
+		if (wantedLandingStage == null) {
+			for (var i = 0; i < projectNames.length; ++i) {
+				if (projectNames[i] == currentHash) {
+					wantedLandingStage = projectStage;
+					wantedProject = projectNames[i];
+					break;
+				}
+			}
+		}
+
+		if (wantedProject == null) {
+			if (wantedLandingStage == null) wantedLandingStage = aboutStage;
+			window.setStage(wantedLandingStage);
+		}
+		else window.setProject(wantedProject);
 	}
 
-    window.setStage(wantedLandingStage);
-	window.setProject(null);
+	window.onhashchange();
 });
