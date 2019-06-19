@@ -66,11 +66,11 @@ a:hover {
 }
 
 #about-content p {
-    font-family: benchnine;
+    font-family: Lora-Regular;
     color: black;
-    font-size: 24px;
+    font-size: 18px;
     text-align-last: left;
-    text-align: justify;
+    text-align: left;
 }
 
 @keyframes fade-in-about-content {
@@ -620,6 +620,8 @@ h2 {
 }
 .project-desc {
     margin-bottom: 15px;
+    font-family: lora-italic;
+    font-size: 20px;
 }
 
 #projects-content iframe {
@@ -694,47 +696,24 @@ h2 {
     width: 100%;
 }
 
-#events-special-title {
-    font-family: Lora-Regular;
-    font-size: 25px;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-}
-
-#events-special-info {
-    margin-top: 1rem;
-}
-
-#events-special-description {
-    font-family: Lora-Regular;
-    font-size: 22px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.events-special {
-    font-family: Lora-Regular;
-    font-size: 22px;
-    color: var(--lighter);
-}
 
 .events-what {
-    font-family: badscript;
+    font-family: Merriweather-LightItalic;
     text-align-last: left;
     font-size: 24px;
 }
 
 
 .events-when {
-    font-family: Lora-Regular;
-    font-size: 20px;
+    font-family: lora-italic;
+    font-size: 15px;
     color: var(--lighter);
     text-align-last: left;
 }
 
 .events-time {
-    font-family: Lora-Regular;
-    font-size: 20px;
+    font-family: lora-italic;
+    font-size: 15px;
     color: var(--lighter);
     text-align-last: left;
 }
@@ -747,7 +726,7 @@ h2 {
 }
 
 .line {
-    min-height: 2px;
+    min-height: 1px;
     width: 100%;
     background-color: var(--lighter);
 }
