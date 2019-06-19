@@ -41,11 +41,11 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady() {
-	console.log("yt-player ready");
+	//console.log("yt-player ready");
 }
 
 function onPlayerStateChange(s) {
-	console.log(s);
+	//console.log(s);
 }
 
 $(function() {
@@ -228,7 +228,6 @@ $(function() {
 
 	var currentHash = location.hash;
 	currentHash = currentHash.substr(1, currentHash.length - 1);
-	console.log(currentHash);
 	for (var i = 0; i < stageNames.length; ++i) {
 		if (stageNames[i] == currentHash) wantedLandingStage = stageNames[i];
 	}

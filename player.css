@@ -3,14 +3,18 @@
 
 @media(max-width: 768px) {
     /* Small */
-    .container { position:relative; width:70vw;}
-    audio { outline:none; width:70vw; margin:0 15px 0 14px; margin-left: 0px}
+    .container { position:relative; width:100%;}
 }
 
 @media(min-width: 768px) {
     /* Big */
     .container { position:relative; margin:0 auto; width:30vw; }
-    audio { outline:none; min-width: 30vw; margin:0 15px 0 14px; margin-left: 0px;}
+}
+
+audio {
+	outline:none;
+	width: 100%;
+	margin-left: 0px;
 }
 
 .column { width:inherit; }
@@ -32,13 +36,14 @@ video::-webkit-media-controls-panel {
 ================================================== */
 
 .music-player {
-color:#000;
-font-family: benchnine;
-font-weight:300;
-padding:5px 0;
-margin-left: 5vw;
+	color:#000;
+	font-family: benchnine;
+	font-weight:300;
+	padding:5px 0;
+	margin-left: 0;
     margin-bottom: 5vh;
     margin-top: 0;
+	margin-right: 0;
 }
 
 .music-player h2 {
