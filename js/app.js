@@ -60,8 +60,13 @@ $(function() {
 	const newsStage = "news";
     
     var stageNames = [aboutStage, musicStage, projectStage, newsStage];
-    var stageHasSideInfo = {aboutStage: true, musicStage: true, projectStage: false, newsStage: false};
-    var stageMap = {};
+    var stageHasSideInfo = {};
+	stageHasSideInfo[aboutStage] = true;
+	stageHasSideInfo[musicStage] = true;
+	stageHasSideInfo[projectStage] = false;
+	stageHasSideInfo[newsStage] = false;
+
+	var stageMap = {};
 	var projectNames = ["strings", "offscore", "originals", "standards"];
 	var projectMap = {};
     var contentView = $("#content-div");
