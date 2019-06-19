@@ -1,48 +1,46 @@
+// This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var ytPlayers = {};
+function onYouTubeIframeAPIReady() {
+	console.log("hello youtube");
+	ytPlayers["strings"] = new YT.Player('strings-iframe', {
+		listType: 'playlist',
+		list: 'PLjd2GXZgLHfQoco2vfF0VxVsydX3Xc6Kn',
+		enablejsapi: 1
+
+		/*height: '390',
+		width: '640',
+		videoId: 'M7lc1UVf-VE',
+		events: {
+			'onReady': onPlayerReady,
+			'onStateChange': onPlayerStateChange
+		}*/
+	});
+	ytPlayers["offscore"] = new YT.Player('offscore-iframe', {
+		listType: 'playlist',
+		list: 'PLjd2GXZgLHfRwOLh_R7wkPachGP9N-tCb',
+		enablejsapi: 1
+	});
+	ytPlayers["originals"] = new YT.Player('originals-iframe', {
+		listType: 'playlist',
+		list: 'PLjd2GXZgLHfSm-sCS-PXkb-UndpZ_JyMC',
+		enablejsapi: 1
+	});
+	ytPlayers["standards"] = new YT.Player('standards-iframe', {
+		listType: 'playlist',
+		list: 'PLjd2GXZgLHfR6prtzs7rSOtFwd6Nm5Dks',
+		enablejsapi: 1
+	});
+}
+
 $(function() {
-    
-	// This code loads the IFrame Player API code asynchronously.
-	//var tag = document.createElement('script');
-
-	//tag.src = "https://www.youtube.com/iframe_api";
-	//var firstScriptTag = document.getElementsByTagName('script')[0];
-	//firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-	// 3. This function creates an <iframe> (and YouTube player)
-	//    after the API code downloads.
-	var ytPlayers = {};
-	function onYouTubeIframeAPIReady() {
-		console.log("hello youtube");
-		ytPlayers["strings"] = new YT.Player('strings-iframe', {
-			listType: 'playlist',
-			list: 'PLjd2GXZgLHfQoco2vfF0VxVsydX3Xc6Kn',
-			enablejsapi: 1
-
-			/*height: '390',
-			width: '640',
-			videoId: 'M7lc1UVf-VE',
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-			}*/
-		});
-		ytPlayers["offscore"] = new YT.Player('offscore-iframe', {
-			listType: 'playlist',
-			list: 'PLjd2GXZgLHfRwOLh_R7wkPachGP9N-tCb',
-			enablejsapi: 1
-		});
-		ytPlayers["originals"] = new YT.Player('originals-iframe', {
-			listType: 'playlist',
-			list: 'PLjd2GXZgLHfSm-sCS-PXkb-UndpZ_JyMC',
-			enablejsapi: 1
-		});
-		ytPlayers["standards"] = new YT.Player('standards-iframe', {
-			listType: 'playlist',
-			list: 'PLjd2GXZgLHfR6prtzs7rSOtFwd6Nm5Dks',
-			enablejsapi: 1
-		});
-	}
-
-
     // Globals
 	window.stage = "";
     window.stageInfos = [];
