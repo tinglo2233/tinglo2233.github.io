@@ -3,11 +3,6 @@
  */
 
 @font-face {
-    font-family: Lora;
-    src: url(fonts/Lora-Regular.ttf);
-}
-
-@font-face {
     font-family: londrina;
     src: url(fonts/Merriweather-Bold.ttf);
 }
@@ -28,8 +23,8 @@
 }
 
 @font-face {
-    font-family: Merriweather;
-    src: url(fonts/Merriweather-LightItalic.ttf);
+    font-family: badscript;
+    src: url(fonts/BadScript-Regular.ttf);
 }
 
 
@@ -201,8 +196,8 @@ body {
 }
 
 h2 {
-    font-family: Merriweather;
-    font-size: 35px;
+    font-family: badscript;
+    font-size: 40px;
     text-align: left;
 }
 
@@ -583,7 +578,7 @@ h2 {
 }
 
 #events-special-title {
-    font-family: Lora;
+    font-family: fredericka;
     font-size: 42px;
     margin-bottom: 3rem;
     margin-top: 3rem;
@@ -594,7 +589,7 @@ h2 {
 }
 
 #events-special-description {
-    font-family: Lora;
+    font-family: benchnine;
     font-size: 24px;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -607,7 +602,7 @@ h2 {
 }
 
 .events-what {
-    font-family: Merriweather;
+    font-family: badscript;
     text-align-last: right;
     font-size: 24px;
     margin-bottom: 5rem;
