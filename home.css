@@ -148,8 +148,8 @@ body {
  */
 
 #header {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -15px;
+    margin-right: -15px;
     background-color: var(--darker);
     -webkit-box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
@@ -183,10 +183,11 @@ body {
 .nav-link {
     color: var(--lighter);
     background-color: transparent;
-    border-bottom: .1rem solid transparent;
+    border-bottom: 4px solid transparent;
     font-family: Merriweather-Black;
     text-align: center;
 	padding: 0px;
+	padding-bottom: 11px;
 }
 
 .nav-link:hover,
@@ -194,7 +195,7 @@ body {
     color: white;
     border-bottom-color: var(--lighter);
     text-decoration: none;
-	border-width: 15px;
+	border-width: 4px;
 }
 
 .active {
@@ -202,7 +203,7 @@ body {
     border-bottom-color: white;
     /*text-decoration: underline;*/
     text-decoration-color: black;
-	border-width: 15px;
+	border-width: 4px;
     text-shadow: 0 .05rem .1rem var(--lighter);
 }
  
@@ -220,7 +221,7 @@ body {
 
 .footer {
     position: absolute;
-    color: rgba(255, 255, 255, .5);
+    color: white;
     bottom: 0;
     width: 100%;
     min-height: 70px;
@@ -328,7 +329,7 @@ h2 {
 		position: relative;
 		margin-left: -15px;
 		min-width: 100vw;
-		background-color: var(--lighter-transparent);
+		background-color: var(--transparent-totally);
 	}
 	#projects-content img {
 		position: relative;
@@ -497,7 +498,7 @@ h2 {
 
 /*left menu background */
 .about-menu-bg {
-    background-color: var(--lighter-transparent);
+    background-color: var(--almost-transparent);
 }
 
 .music-menu-bg {
@@ -505,11 +506,11 @@ h2 {
 }
 
 .projects-menu-bg {
-    background-color: var(--almost-transparent);
+    background-color: var(--transparent-totally);
 }
 
 .news-menu-bg {
-    background-color: var(--almost-transparent);
+    background-color: var(--transparent-totally);
 }
 
 
@@ -719,31 +720,36 @@ h2 {
 
 .events-what {
     font-family: badscript;
-    text-align-last: right;
+    text-align-last: left;
     font-size: 24px;
-    margin-bottom: 5rem;
 }
 
 
 .events-when {
     font-family: Lora-Regular;
-    font-size: 15px;
+    font-size: 20px;
+    color: var(--lighter);
+    text-align-last: left;
+}
+
+.events-time {
+    font-family: Lora-Regular;
+    font-size: 20px;
     color: var(--lighter);
     text-align-last: left;
 }
 
 .events-where {
     font-family: Lora-Regular;
-    font-size: 15px;
+    font-size: 20px;
     color: var(--lighter);
     text-align-last: left;
 }
-/*
+
 .line {
     min-height: 2px;
     width: 100%;
     background-color: var(--lighter);
-    margin-top: -10px;
 }
 
 .events-container{
@@ -752,10 +758,11 @@ h2 {
     align-content: center;
     text-align: center;
     text-align-last: center;
+	margin-top: 60px;
 }
 
 .event {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .event:empty {
     min-height: 100px;
