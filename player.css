@@ -11,6 +11,12 @@
     .container { position:relative; margin:0 auto; width:30vw; }
 }
 
+@font-face {
+	font-family: tc;
+	src: url(fonts/NotoSansTC/NotoSansTC-Light.otf) format("opentype"); */
+    unicode-range: U+4E00-9FFF, U+3400-4DBF;
+}
+
 audio {
 	outline:none;
 	width: 100%;
@@ -37,7 +43,7 @@ video::-webkit-media-controls-panel {
 
 .music-player {
 	color:#000;
-	font-family: benchnine;
+	font-family: benchnine, tc;
 	font-weight:300;
 	padding:5px 0;
 	margin-left: 0;
@@ -88,7 +94,15 @@ video::-webkit-media-controls-panel {
 #plList li { cursor:pointer; display:block; margin:0; padding:6px 0; margin-left: -40px}
 #plList li:hover { background-color: var(--transparent); }
 .plItem { position:relative; }
-.plTitle { left:50px; overflow:hidden; position:absolute; right:65px; text-overflow:ellipsis; top:0; white-space:nowrap; }
+.plTitle {
+	left:50px;
+	overflow:hidden;
+	position:absolute;
+	right:65px;
+	text-overflow:ellipsis;
+	top:0;
+	white-space:nowrap;
+}
 .plNum { padding-left:21px; width:25px; }
 .plLength { padding-left:21px; position:absolute; right:21px; top:0; }
 .plSel,.plSel:hover { background-color:var(--transparent)!important; cursor:default!important; }

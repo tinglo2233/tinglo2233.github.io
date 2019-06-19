@@ -38,8 +38,8 @@
 }
 
 @font-face {
-	font-family: chinese;
-	src: url(fonts/WireOne.ttf); /* format("opentype") */
+	font-family: tc;
+	src: url(fonts/NotoSansTC/NotoSansTC-Regular.otf) format("opentype"); */
     unicode-range: U+4E00-9FFF, U+3400-4DBF;
 }
 
@@ -336,6 +336,11 @@ h2 {
 	#menu-bar {
 		display: none;
 	}
+	#photo-by {
+		left: 0px;
+		writing-mode: vertical-rl;
+		bottom: 4px;
+	}
 }
 
 @media(min-width: 768px) {
@@ -427,6 +432,10 @@ h2 {
 	}
 	#projects-content img {
 		position: absolute;
+	}
+	#photo-by {
+		right: 24px;
+		bottom: 1px;
 	}
 }
 
@@ -565,7 +574,17 @@ h2 {
 	position: absolute;
 	left: 180px;
 	right: 20px;
-	margin-left: 15px;
+	margin-top: 3px;
+	margin-left: 30px;
+}
+
+#photo-by {
+	font-family: lora-italic;
+	color: white;
+	font-size: 12px;
+    text-align: bottom right;
+	text-shadow: none;
+	position: absolute;
 }
 
 .social-row {

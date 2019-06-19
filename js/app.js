@@ -60,6 +60,7 @@ $(function() {
 	const newsStage = "news";
     
     var stageNames = [aboutStage, musicStage, projectStage, newsStage];
+	var bgPhotoAutors = ["Carla Bertomeu", "Yen-An Chen", "Tjeerd Postma", "Szu Yi"]
     var stageHasSideInfo = {};
 	stageHasSideInfo[aboutStage] = true;
 	stageHasSideInfo[musicStage] = true;
@@ -74,6 +75,7 @@ $(function() {
 	var fbContainer = $("#facebook-container");
 	var fbIframe = $(".fb-page");
 	var body = $("#bg-root");
+	var photoBy = $("#photo-by");
     
     for (let i = 0; i < stageNames.length; ++i) {
         let name = stageNames[i];
@@ -82,7 +84,8 @@ $(function() {
             name: name,
             view: $("#"+name),
             button: $("#"+name+"-button"),
-            content: $("#"+name+"-content")
+            content: $("#"+name+"-content"),
+			bgAuthor: bgPhotoAutors[i]
         };
         
         window.stageInfos.push(stage);
@@ -127,6 +130,7 @@ $(function() {
 				}
                 content.removeClass("hidden");
                 button.addClass("active");
+				photoBy.text("Photo by "+window.stageInfos[i].bgAuthor);
             }
 			else {
 				view.addClass("hidden");
