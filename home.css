@@ -28,6 +28,11 @@
 }
 
 @font-face {
+    font-family: Merriweather-Black;
+    src: url(fonts/Merriweather-Black.ttf);
+}
+
+@font-face {
     font-family: badscript;
     src: url(fonts/BadScript-Regular.ttf);
 }
@@ -69,10 +74,10 @@ a:hover {
 }
 
 #menu-bar p {
-    font-family: badscript;
+    font-family: lora-italic;
     color: var(--darker);
     text-align-last: left;
-    text-align: justify;
+    text-align: left;
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 	
 	animation-name: fade-in-about-content;
@@ -161,7 +166,7 @@ body {
     color: rgba(255, 255, 255, .7);
     background-color: transparent;
     border-bottom: .1rem solid transparent;
-    font-family: londrina;
+    font-family: Merriweather-Black;
     text-align: center;
 }
 
@@ -262,13 +267,6 @@ h2 {
 		font-size: 16px;
         font-size: 5vw;
     }
-    .menu-content {
-        font-size: 28px;
-        margin-left: 5vh;
-        margin-right: 5vh;
-        margin-top: 0vh;
-        margin-bottom: 70px;
-    }
     #music-content {
         margin-left: 3vw;
     }
@@ -356,12 +354,13 @@ h2 {
         font-size: 1.7vw;
     }
     .menu-content {
-        font-size: 28px;
+        font-size: 15px;
+        font-size: 1.3vw;
         margin-left: 1vh;
         margin-right: 1vh;
-        margin-top: -1vh;
-        min-height: 60%;
-        min-height: 60vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        min-height: 100%;
     }
     #projects-content iframe {
         width: 50vw;
@@ -403,12 +402,6 @@ h2 {
         padding-right: 7vw;
         padding-top: 20%;
     }
-    .menu-content {
-        font-size: 30px;
-        margin-left: 2vh;
-        margin-right: 2vh;
-        margin-top: -2vh;
-    }
 }
 
 @media(min-width: 1200px) {
@@ -417,12 +410,6 @@ h2 {
         padding-left: 22vw;
         padding-right: 7vw;
         padding-top: 20%;
-    }
-    .menu-content {
-        font-size: 32px;
-        margin-left: 5vh;
-        margin-right: 5vh;
-        margin-top: -5vh;
     }
 }
 
@@ -469,7 +456,7 @@ h2 {
 }
 
 .music-menu-bg {
-    background-color: var(--lighter-transparent);
+    background-color: var(--almost-transparent);
 }
 
 .projects-menu-bg {
@@ -582,6 +569,14 @@ h2 {
     text-align-last: center;
 }
 
+.project-title {
+    
+}
+.project-desc {
+    margin-bottom: 15px;
+    
+}
+
 #projects-content iframe {
     margin-bottom: 6rem;
     display: inline-block;
@@ -648,8 +643,8 @@ h2 {
 .yt-playlist {
     display: inline-block;
     align-content: center;
-    text-align: center;
-    text-align-last: center;
+    text-align: left;
+    text-align-last: left;
     float: center;
     width: 100%;
 }
