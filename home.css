@@ -285,6 +285,7 @@ h2 {
 	}
 	.projects-bg {
 		background-size: cover;
+		background-position: -45.5vh 0vh;
 	}
 	.music-bg {
 		background-position: 120vw center;
@@ -391,7 +392,8 @@ h2 {
 		background-size: contain;
 	}
 	.projects-bg {
-		background-size: contain;
+		background-size: cover;
+		background-position: left-top;
 	}
     .events-what {
         font-size: 36px;
@@ -469,10 +471,8 @@ h2 {
 .projects-bg {
     background-image: url("img/projects.jpg");
 	background-repeat: no-repeat;
-    background-position: left top;
     background-attachment: fixed;
     background-color: #605f4b;
-    background-size: cover;
 }
 
 .news-bg {
