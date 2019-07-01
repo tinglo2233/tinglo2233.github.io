@@ -110,7 +110,7 @@ $(function() {
     
     window.setStage = function(stage)
 	{
-		if (window.project != null) {
+		if (window.project != null || window.project === undefined) {
 			window.setProject(null);
 			location.hash = stage;
 		}
