@@ -28,7 +28,7 @@
     <div id="bg-root" class="container-fluid">
 		<div id="photo-by">Photo by</div>
         <div class="row">
-            <div id="menu-div" class="cover-container col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div id="menu-div" class="col_desktop-4 col_phone-12 cover-container">
                 <div id="menu-bar">
                     <div id="about" class="menu-content">
                         <p>"Her extraordinary compositions and arrangements express a broad musical imagination, hightly outstanding level and an explosion of art on many different levels."</p>
@@ -45,10 +45,10 @@
                 </div>
                 <div id="header">
                     <div class="row">
-                        <a id="about-button" class="nav-link active col-lg-3 col-md-3 col-sm-3 col-xs-3" role="button">About</a>
-                        <a id="music-button" class="nav-link col-lg-3 col-md-3 col-sm-3 col-xs-3" role="button">Music</a>
-                        <a id="projects-button" class="nav-link col-lg-3 col-md-3 col-sm-3 col-xs-3" role="button">Projects</a>
-                        <a id="news-button" class="nav-link col-lg-3 col-md-3 col-sm-3 col-xs-3" role="button">News</a>
+                        <a id="about-button" class="nav-link active col_always-3" role="button">About</a>
+                        <a id="music-button" class="nav-link col_always-3" role="button">Music</a>
+                        <a id="projects-button" class="nav-link col_always-3" role="button">Projects</a>
+                        <a id="news-button" class="nav-link col_always-3" role="button">News</a>
                     </div>
                 </div>
                 <div class="footer">
@@ -63,7 +63,7 @@
                     </div>-->
                 </div>
             </div>
-            <div id="content-div" class="col-content col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <div id="content-div" class="col-content col_desktop-8 col_phone-12">
                 <div id="about-content" class="content-inner">
                     <p>Jazz singer, songwriter, arranger and flutist, YenTing was born and raised in Kaohsiung, Taiwan, graduated from the Conservatory of Amsterdam in 2019.</p>
                     <p>With a foundation of classical piano and flute at a young age, she grew up singing in choirs and playing in school orchestras. Self-taught as a singer-songwriter, she won several singing competitions during her period of high school and university. </p>
@@ -184,16 +184,16 @@
                 </div>
                 <div id="projects-content" class="content-inner hidden row">
 					
-                    <a id="strings-button" class="project-button col-lg-6 col-md-6 col-sm-6 col-xs-12" role="button">
+                    <a id="strings-button" class="project-button col_desktop-6 col_phone-12" role="button">
 						<img src="img/yenting meets strings.jpg" class="tl-button"> </img>
 					</a>
-                    <a id="offscore-button" class="project-button col-lg-6 col-md-6 col-sm-6 col-xs-12" role="button">
+                    <a id="offscore-button" class="project-button col_desktop-6 col_phone-12" role="button">
 						<img src="img/off-score project.jpg" class="tr-button"> </img>
 					</a>
-                    <a id="originals-button" class="project-button col-lg-6 col-md-6 col-sm-6 col-xs-12" role="button">
+                    <a id="originals-button" class="project-button col_desktop-6 col_phone-12" role="button">
 						<img src="img/other originals.jpg" class="bl-button"> </img>
 					</a>
-                    <a id="standards-button" class="project-button col-lg-6 col-md-6 col-sm-6 col-xs-12" role="button">
+                    <a id="standards-button" class="project-button col_desktop-6 col_phone-12" role="button">
 						<img src="img/yenting sings Standards.jpg" class="br-button"> </img>
 					</a>
 					<!-- <div id="strings-project-content">
@@ -208,7 +208,7 @@
 					<div id="standards-project-content">
 						<div class="yt-playlist"><div id="standards-iframe"></div></div>
 					</div>-->
-					<div id="strings-project-content" class="project-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div id="strings-project-content" class="project-content col_always-12">
 						
                         <div class="yt-playlist">
                             <h2 class="project-title">YenTing meets Strings</h2>
@@ -216,19 +216,19 @@
                             <iframe id="strings-iframe" src="https://www.youtube-nocookie.com/embed/videoseries?enablejsapi=1&list=PLjd2GXZgLHfQoco2vfF0VxVsydX3Xc6Kn" frameborder="0" allowfullscreen allow="encrypted-media"></iframe>
                         </div>
                     </div>
-					<div id="offscore-project-content" class="project-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div id="offscore-project-content" class="project-content col_always-12">
 						<div class="yt-playlist">
                         <h2 class="project-title">Off-Score Project</h2>
                         <div class="project-desc">Off-Score project is an interactive music album that YenTing experiments with Ferran Bertomeu Castells the game developer and Vanja Mrgan the visual artist. <br>The album consists 5 original songs, each accompanied by a video game that guide the player/listener through the music, the lyrics and a deeper story behind the song. <br> This project is proudly co-funded by Stimuleringsfonds. </div>    
                         <iframe id="offscore-iframe" src="https://www.youtube-nocookie.com/embed/videoseries?enablejsapi=1&list=PLjd2GXZgLHfRwOLh_R7wkPachGP9N-tCb" frameborder="0" allowfullscreen allow="encrypted-media"></iframe></div>
                     </div>
-					<div id="originals-project-content" class="project-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div id="originals-project-content" class="project-content col_always-12">
 						<div class="yt-playlist">
                         <h2 class="project-title">Other Projects: YenTing's Original</h2>
                         <div class="project-desc">YenTing composes and arranges for herself, for big bands, for movies and etc. <br>She writes song about memories, about future and about one's current self.  </div>
                         <iframe id="originals-iframe" src="https://www.youtube-nocookie.com/embed/videoseries?enablejsapi=1&list=PLjd2GXZgLHfSm-sCS-PXkb-UndpZ_JyMC" frameborder="0" allowfullscreen allow="encrypted-media"></iframe></div>
                     </div>
-					<div id="standards-project-content" class="project-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div id="standards-project-content" class="project-content col_always-12">
 						<div class="yt-playlist">
                         <h2 class="project-title">YenTing sings standards</h2>
                         <div class="project-desc">Including the styles of swing, ballads, bossa nova and so on, YenTing performs her favorite jazz standards with her own interpretation in a variety of settings from intimate duo to blasting big band. </div>
@@ -246,23 +246,23 @@
                             <div>and more bands t.b.a.</div>
                         </div>
                     </div>-->
-					<div class="events-container col-lg-6 col-md-6 col-sm-6 col-xs-12" >
+					<div class="events-container col_desktop-6 col_phone-12" >
                         <div class="event">
                             <div class="events-what">Bachelor Final Concert</div>
 							<div class="line"></div>
                             <div class="row">
-                                <div class="events-where col-md-12 col-xs-12">Amsterdam Blue Note, Amsterdam</div>
-                                <div class="events-when col-lg-4 col-md-4 col-sm-4 col-xs-6">2019 May 7</div>
-								<div class="events-time col-lg-8 col-md-v col-sm-8 col-xs-6">19:00</div>
+                                <div class="events-where col_always-12">Amsterdam Blue Note, Amsterdam</div>
+                                <div class="events-when col_desktop-4 col_phone-6">2019 May 7</div>
+								<div class="events-time col_desktop-8 col_phone-6">19:00</div>
                             </div>
                             <!--<div class="line"></div>-->
                         </div> 
                         <div class="event">
 							<div class="line"></div>
                             <div class="row">
-                                <div class="events-where col-md-12 col-xs-12">Harbour Suites, Amsterdam</div>
-                                <div class="events-when col-lg-4 col-md-4 col-sm-4 col-xs-6">2019 May 19</div>
-								<div class="events-time col-lg-8 col-md-v col-sm-8 col-xs-6">16:00</div>
+                                <div class="events-where col_always-12">Harbour Suites, Amsterdam</div>
+                                <div class="events-when col_desktop-4 col_phone-6">2019 May 19</div>
+								<div class="events-time col_desktop-8 col_phone-6">16:00</div>
                             </div>
                             <!--<div class="line"></div>
                             <div class="events-what">Jazz Recital</div>-->
@@ -270,9 +270,9 @@
 						<div class="event">
 							<div class="line"></div>
                             <div class="row">
-                                <div class="events-where col-md-12 col-xs-12">ARTIS Zoo, Amsterdam</div>
-                                <div class="events-when col-lg-4 col-md-4 col-sm-4 col-xs-6">2019 Jun 1</div>
-								<div class="events-time col-lg-8 col-md-v col-sm-8 col-xs-6">16:00</div>
+                                <div class="events-where col_always-12">ARTIS Zoo, Amsterdam</div>
+                                <div class="events-when col_desktop-4 col_phone-6">2019 Jun 1</div>
+								<div class="events-time col_desktop-8 col_phone-6">16:00</div>
                             </div>
                             <!--<div class="line"></div>
                             <div class="events-what">Jazz Recital</div>-->
@@ -280,9 +280,9 @@
 						<div class="event">
 							<div class="line"></div>
                             <div class="row">
-                                <div class="events-where col-md-12 col-xs-12">Marriott Hotel-Sorel's Bar, Amsterdam</div>
-                                <div class="events-when col-lg-4 col-md-4 col-sm-4 col-xs-6">2019 Aug 1</div>
-								<div class="events-time col-lg-8 col-md-v col-sm-8 col-xs-6">20:00</div>
+                                <div class="events-where col_always-12">Marriott Hotel-Sorel's Bar, Amsterdam</div>
+                                <div class="events-when col_desktop-4 col_phone-6">2019 Aug 1</div>
+								<div class="events-time col_desktop-8 col_phone-6">20:00</div>
                             </div>
                             <!--<div class="line"></div>
                             <div class="events-what">Jazz Recital</div>-->
@@ -290,9 +290,9 @@
                         <div class="event">
 							<div class="line"></div>
                             <div class="row">
-                                <div class="events-where col-md-12 col-xs-12">NEMO, Amsterdam</div>
-                                <div class="events-when col-lg-4 col-md-4 col-sm-4 col-xs-6">2019 Aug 22</div>
-								<div class="events-time col-lg-8 col-md-v col-sm-8 col-xs-6">17:00</div>
+                                <div class="events-where col_always-12">NEMO, Amsterdam</div>
+                                <div class="events-when col_desktop-4 col_phone-6">2019 Aug 22</div>
+								<div class="events-time col_desktop-8 col_phone-6">17:00</div>
                             </div>
                             <!--<div class="line"></div>
                             <div class="events-what">Jazz Recital</div>-->
@@ -300,9 +300,9 @@
                         <div class="event">
 							<div class="line"></div>
                             <div class="row">
-                                <div class="events-where col-md-12 col-xs-12">Hermitage Museum, Amsterdam</div>
-                                <div class="events-when col-lg-4 col-md-4 col-sm-4 col-xs-6">2019 Aug 24</div>
-								<div class="events-time col-lg-8 col-md-v col-sm-8 col-xs-6">16:00</div>
+                                <div class="events-where col_always-12">Hermitage Museum, Amsterdam</div>
+                                <div class="events-when col_desktop-4 col_phone-6">2019 Aug 24</div>
+								<div class="events-time col_desktop-8 col_phone-6">16:00</div>
                             </div>
                             <!--<div class="line"></div>
                             <div class="events-what">Jazz Recital</div>-->
@@ -310,15 +310,15 @@
                         <div class="event">
 							<div class="line"></div>
                             <div class="row">
-                                <div class="events-where col-md-12 col-xs-12">Jazz in het Dorp, Amstelveen, Amsterdam</div>
-                                <div class="events-when col-lg-4 col-md-4 col-sm-4 col-xs-6">2019 Sep 1</div>
-								<div class="events-time col-lg-8 col-md-v col-sm-8 col-xs-6">t.b.a.</div>
+                                <div class="events-where col_always-12">Jazz in het Dorp, Amstelveen, Amsterdam</div>
+                                <div class="events-when col_desktop-4 col_phone-6">2019 Sep 1</div>
+								<div class="events-time col_desktop-8 col_phone-6">t.b.a.</div>
                             </div>
                             <!--<div class="line"></div>
                             <div class="events-what">Jazz Recital</div>-->
                         </div>
                     </div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="facebook-container">
+					<div class="col_desktop-6 col_phone-12" id="facebook-container">
 						<div class="fb-page" data-href="https://www.facebook.com/yentinglo" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
 							<blockquote cite="https://www.facebook.com/yentinglo" class="fb-xfbml-parse-ignore">
 								<a href="https://www.facebook.com/yentinglo">羅妍婷 YenTing Lo</a>
