@@ -278,13 +278,20 @@ h2 {
         min-height: auto;
     }
     .about-bg {
+        background-position: -750px 0%;
         background-position: -75vh 0vh;
     }
 	.news-bg {
 		background-position: 0vw top;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
 		background-size: cover;
 	}
 	.projects-bg {
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
 		background-size: cover;
 		background-position: -45.5vh 0vh;
 	}
@@ -410,6 +417,9 @@ h2 {
 		background-size: contain;
 	}
 	.projects-bg {
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
 		background-size: cover;
 		background-position: left-top;
 	}
@@ -492,13 +502,18 @@ h2 {
     background-image: url("img/about.JPG");
     background-attachment: fixed;
     background-color: #f3f6fd;
-    background-size: cover;
-    background-attachment: fixed;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .music-bg {
     background-image: url("img/music.jpg");
-    background-size: cover;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
     background-attachment: fixed;
     background-color: #f1f0ec;
 }
@@ -515,7 +530,10 @@ h2 {
 	background-repeat: no-repeat;
     background-color: #110e09;
     background-attachment: fixed;
-    background-size: cover;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /*left menu background */
@@ -780,9 +798,10 @@ h2 {
 }
 
 html {
+	height: 100%;
 	font-size: 10px;
-    font-family: sans-serif;
-    -webkit-text-size-adjust: 100%;
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
