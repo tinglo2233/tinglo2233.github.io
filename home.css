@@ -225,7 +225,7 @@ body {
     color: white;
     bottom: 0;
     width: 100%;
-    min-height: 70px;
+    min-height: 60px;
     left: 0;
     height: 7vh;
     align-content: right;
@@ -574,12 +574,12 @@ h2 {
 
 #facebook-icon {
     background-image: url("img/fb.png");
-    width: 40px;
+    /*width: 40px;
     height: 40px;
     min-height: 40px;
     min-width: 40px;
 	margin: 15px;
-	margin-right: 5px;
+	margin-right: 5px;*/
 }
 
 #soundcloud {
@@ -590,12 +590,15 @@ h2 {
     background-image: url("img/yt.png");
 }
 
+#instagram {
+    background-image: url("img/ig.png");
+}
 
 .social-icon {
-    width: 50px;
-    height: 50px;
-    min-height: 50px;
-    min-width: 50px;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    min-width: 40px;
 	margin: 10px;
 	margin-right: 5px;
 	margin-left: 5px;
@@ -610,13 +613,13 @@ h2 {
 	background-image: url("img/yentinglo.png");
     background-repeat: no-repeat;
     background-size: contain;
-	background-position: right center;
-	min-height: 60px;
+	background-position: right;
+	min-height: 40px;
 	position: absolute;
 	right: 20px;
-	margin-top: 7px;
-	margin-bottom: 3px;
-	left: 180px;
+	margin-top: 6px;
+	margin-bottom: 2px;
+	left: 200px;
 	bottom: 0px;
 	top: 0px;
 }
