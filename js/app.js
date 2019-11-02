@@ -1,3 +1,5 @@
+"use strict";
+
 // This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -58,14 +60,22 @@ $(function() {
 	const musicStage = "music";
 	const projectStage = "projects";
 	const newsStage = "news";
+	const albumStage = "album";
     
-    var stageNames = [aboutStage, musicStage, projectStage, newsStage];
-	var bgPhotoAutors = ["Carla Bertomeu", "Yen-An Chen", "Tjeerd Postma", "Szu Yi"]
+    var stageNames = [aboutStage, musicStage, projectStage, newsStage, albumStage];
+	var bgPhotoAutors = ["Carla Bertomeu", "Yen-An Chen", "Tjeerd Postma", "Szu Yi", "Undefined"]
     var stageHasSideInfo = {};
 	stageHasSideInfo[aboutStage] = true;
 	stageHasSideInfo[musicStage] = true;
 	stageHasSideInfo[projectStage] = false;
 	stageHasSideInfo[newsStage] = false;
+	stageHasSideInfo[albumStage] = true;
+	var accessibleStages = {};
+	accessibleStages[aboutStage] = true;
+	accessibleStages[musicStage] = true;
+	accessibleStages[projectStage] = true;
+	accessibleStages[newsStage] = true;
+	accessibleStages[albumStage] = true;
 
 	var stageMap = {};
 	var projectNames = ["strings", "offscore", "originals", "standards"];
@@ -91,6 +101,10 @@ $(function() {
         window.stageInfos.push(stage);
         stage.button.on("click", function () {window.setStage(stage.name);});
         stageMap[name] = stage;
+
+		if (!accessibleStages[name]) {
+			stage.button.addClass("hidden");
+		}
     }
 
 	for (let i = 0; i < projectNames.length; ++i) {
@@ -256,7 +270,7 @@ $(function() {
 		}
 
 		if (wantedProject == null) {
-			if (wantedLandingStage == null) wantedLandingStage = aboutStage;
+			if (wantedLandingStage == null) wantedLandingStage = albumStage;
 			window.setStage(wantedLandingStage);
 		}
 		else window.setProject(wantedProject);

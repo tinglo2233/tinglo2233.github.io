@@ -73,6 +73,14 @@ a:hover {
     text-align: left;
 }
 
+#album-content p {
+    font-family: Merriweather-LightItalic;
+    color: black;
+    font-size: 16px;
+    text-align-last: left;
+    text-align: left;
+}
+
 @keyframes fade-in-about-content {
 	from {
 		color: var(--transparent-totally);
@@ -497,8 +505,57 @@ h2 {
 	}
 }
 
+#album-content {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+	color: var(--darker);
+}
+
+
+
+#album-content iframe {
+    display: block;
+	margin: auto;
+}
+
+#album-content h2 {
+	text-align: left;
+	text-align-last: left;
+	float: left;
+	width: 100%;
+}
+
+#album-content p {
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
+#album-playlist {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+#album-playlist p {
+	padding-left: 16px;
+	padding-right: 16px;
+	float: left;
+}
+
+
+
 /* content background images */
 .about-bg {
+    background-image: url("img/about.JPG");
+    background-attachment: fixed;
+    background-color: #f3f6fd;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.album-bg {
     background-image: url("img/about.JPG");
     background-attachment: fixed;
     background-color: #f3f6fd;
@@ -550,6 +607,10 @@ h2 {
 }
 
 .news-menu-bg {
+    background-color: var(--transparent-totally);
+}
+
+.album-menu-bg {
     background-color: var(--transparent-totally);
 }
 
