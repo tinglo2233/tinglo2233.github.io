@@ -578,6 +578,10 @@ h2 {
 	width: 100%;
 }
 
+#album-info {
+	padding-bottom: 15px;
+}
+
 #album-info p {
     font-size: 12px;
 	text-shadow: none;
