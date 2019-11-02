@@ -164,6 +164,7 @@ body {
     text-shadow: 0 .05rem .1rem var(--lighter);
     padding: 15px;
 	padding-bottom: 0px;
+	padding-top: 0px;
 }
 
 #menu-bar {
@@ -191,25 +192,39 @@ body {
 .nav-link {
     color: var(--lighter);
     background-color: transparent;
-    border-bottom: 4px solid transparent;
     font-family: Merriweather-Black;
     text-align: center;
+    text-align-last: center;
 	padding: 0px;
-	padding-bottom: 11px;
 	float: center;
+}
+
+.nav-link.top-nav {
+    /*border-top: 4px solid transparent;*/
+	padding-bottom: 15px;
+	padding-top: 11px;
+}
+.nav-link.bottom-nav {
+    /*border-bottom: 4px solid transparent;*/
+	padding-bottom: 11px;
+}
+
+.about-padding {
+	margin-left: 10px;
+	margin-right: -10px;
 }
 
 .nav-link:hover,
 .nav-link:focus {
     color: white;
-    border-bottom-color: var(--lighter);
+    border-color: var(--lighter);
     text-decoration: none;
 	border-width: 4px;
 }
 
 .active {
     color: white;
-    border-bottom-color: white;
+    border-color: white;
     /*text-decoration: underline;*/
     text-decoration-color: black;
 	border-width: 4px;
@@ -540,6 +555,7 @@ h2 {
 	padding-left: 16px;
 	padding-right: 16px;
 	float: left;
+	width: 100%;
 }
 
 
