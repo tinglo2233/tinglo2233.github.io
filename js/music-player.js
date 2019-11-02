@@ -8,9 +8,9 @@ $(function () {
     b.setAttribute('data-useragent', navigator.userAgent);
     b.setAttribute('data-platform', navigator.platform);
     
-    var playlistNames = ["strings", "offscore", "other", "standards"];
+    var playlistNames = [/*"strings", */"offscore", "other", "standards"];
     var playlists = {
-        "strings" : [
+        /* "strings" : [
             {
                 "name": "Waltz of Color 本色示人",
                 "file": "strings/waltz of color"
@@ -39,7 +39,7 @@ $(function () {
                 "length": "00:57",
                 "file": "strings/cassia string"
             }
-        ],
+        ], */
         "offscore" : [
             {
                 "name": "Copy Machine",
