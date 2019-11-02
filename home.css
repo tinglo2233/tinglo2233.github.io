@@ -318,15 +318,16 @@ h2 {
         min-height: auto;
     }
     .about-bg {
-        background-position: -750px 0%;
-        background-position: -75vh 0vh;
+        background-position: -255vw center;
+		background-attachment: scroll;
     }
 	.news-bg {
-		background-position: 0vw top;
+		background-position: -60vw top;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+		background-attachment: scroll;
 	}
 	.projects-bg {
 		-webkit-background-size: cover;
@@ -334,9 +335,11 @@ h2 {
 		-o-background-size: cover;
 		background-size: cover;
 		background-position: -45.5vh 0vh;
+		background-attachment: scroll;
 	}
 	.music-bg {
-		background-position: 120vw center;
+		background-position: 233vw center;
+		background-attachment: scroll;
 	}
     .events-what {
         font-size: 32px;
@@ -457,13 +460,16 @@ h2 {
     }
     .about-bg {
         background-position: center top;
+		background-attachment: fixed;
     }
 	.music-bg {
 		background-position: right center;
+		background-attachment: fixed;
 	}
 	.news-bg {
 		background-position: left top;
 		background-size: contain;
+		background-attachment: fixed;
 	}
 	.projects-bg {
 		-webkit-background-size: cover;
@@ -471,6 +477,7 @@ h2 {
 		-o-background-size: cover;
 		background-size: cover;
 		background-position: left-top;
+		background-attachment: fixed;
 	}
     .events-what {
         font-size: 36px;
@@ -635,7 +642,6 @@ h2 {
 /* content background images */
 .about-bg {
     background-image: url("img/about.JPG");
-    background-attachment: fixed;
     background-color: #f3f6fd;
     -webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -656,14 +662,12 @@ h2 {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-    background-attachment: fixed;
     background-color: #f1f0ec;
 }
 
 .projects-bg {
     background-image: url("img/projects.jpg");
 	background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: #605f4b;
 }
 
@@ -671,7 +675,6 @@ h2 {
     background-image: url("img/news.jpg");
 	background-repeat: no-repeat;
     background-color: #110e09;
-    background-attachment: fixed;
     -webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
