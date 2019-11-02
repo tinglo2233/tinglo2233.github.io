@@ -553,8 +553,14 @@ h2 {
 	}
 	.album-bg {
 		background: rgb(225,239,243);
-		background: linear-gradient(120deg, rgba(225,239,243,1) 0%, rgba(227,229,239,1) 16%, rgba(203,194,210,1) 35%, rgba(255,255,255,1) 67%, rgba(224,199,166,1) 100%); 
+		background: linear-gradient(300deg, rgba(225,239,243,1) 0%, rgba(227,229,239,1) 16%, rgba(203,194,210,1) 35%, rgba(255,255,255,1) 67%, rgba(224,199,166,1) 100%); 
 	}
+    #album-playlist img {
+		margin: auto;
+		text-align-last: center;
+		display: block;
+	}
+
 }
 
 #album-content {
@@ -631,7 +637,8 @@ h2 {
 
 #album-playlist img {
 	width:300px;
-    padding:30px;
+    padding:15px;
+    padding-bottom: 5px;
 }
 
 #album span {
