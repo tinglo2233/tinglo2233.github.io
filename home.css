@@ -550,6 +550,9 @@ h2 {
     display: block;
 	margin: auto;
     width: 100%;
+	min-height: 687px;
+    height: 80%;
+    height: 80vh;
 }
 
 #album-content h2 {
@@ -566,8 +569,6 @@ h2 {
 }
 
 #album-playlist {
-	padding-top: 16px;
-	padding-bottom: 16px;
 }
 
 #album-playlist p {
@@ -579,6 +580,7 @@ h2 {
 
 #album-info p {
     font-size: 12px;
+	text-shadow: none;
 }
 
 #album-footer {
@@ -599,6 +601,8 @@ h2 {
 
 #album-playlist a {
 	color:darkgoldenrod;
+	text-shadow: none;
+	font-weight: bold;
 }
 
 #album-playlist img {
