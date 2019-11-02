@@ -48,8 +48,8 @@
  */
 
 :root {
-    --darker: rgb(62, 117, 130);
-    --lighter: rgb(199, 229, 237);
+    --darker: rgb(75, 71, 69);
+    --lighter: rgb(186, 186, 186);
     --lighter-transparent: rgba(199, 229, 237, 0.5);
     --transparent: rgba(255,255,255,128);
     --transparent-totally: rgba(255,255,255,0);
@@ -66,7 +66,7 @@ a:hover {
 }
 
 #about-content p {
-    font-family: Merriweather-LightItalic;
+    font-family: Merriweather-LightItalic, tc;
     color: black;
     font-size: 16px;
     text-align-last: left;
@@ -74,7 +74,7 @@ a:hover {
 }
 
 #album-content p {
-    font-family: Merriweather-LightItalic;
+    font-family: Merriweather-LightItalic, tc;
     color: black;
     font-size: 16px;
     text-align-last: left;
@@ -118,6 +118,7 @@ body {
     color: #fff;
     text-align: center;
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    font-family: tc;
 }
 
 .col-content {
@@ -189,6 +190,19 @@ body {
 	animation-fill-mode: forward;
 }
 
+#menu-bar a {
+    font-family: lora-italic;
+    color: var(--darker);
+    text-align-last: left;
+    text-align: left;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+	
+	animation-name: fade-in-about-content;
+	animation-duration: 0.69s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forward;
+}
+
 .nav-link {
     color: var(--lighter);
     background-color: transparent;
@@ -238,6 +252,9 @@ body {
     align-items: center;
 }
 
+.menu-content a {
+    color: var(--darker);
+}
 
 /*
  * Footer
@@ -532,9 +549,11 @@ h2 {
 #album-content iframe {
     display: block;
 	margin: auto;
+    width: 100%;
 }
 
 #album-content h2 {
+    font-family: tc;
 	text-align: left;
 	text-align-last: left;
 	float: left;
@@ -558,7 +577,39 @@ h2 {
 	width: 100%;
 }
 
+#album-info p {
+    font-size: 12px;
+}
 
+#album-footer {
+    margin: 15px;
+    padding-top: 15px;
+    padding-bottom: 7px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+#album-footer p {
+    font-size: 13px;
+}
+
+#album-footer .line {
+    display:inline-block;
+}
+
+
+#album-playlist a {
+	color:darkgoldenrod;
+}
+
+#album-playlist img {
+	width:300px;
+    padding:30px;
+}
+
+#album span {
+    color: white;
+    text-shadow: none;
+}
 
 /* content background images */
 .about-bg {
@@ -572,9 +623,8 @@ h2 {
 }
 
 .album-bg {
-    background-image: url("img/about.JPG");
-    background-attachment: fixed;
-    background-color: #f3f6fd;
+    background: rgb(225,239,243);
+    background: linear-gradient(90deg, rgba(225,239,243,1) 0%, rgba(227,229,239,1) 16%, rgba(203,194,210,1) 35%, rgba(255,255,255,1) 67%, rgba(224,199,166,1) 100%); 
     -webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -627,7 +677,7 @@ h2 {
 }
 
 .album-menu-bg {
-    background-color: var(--transparent-totally);
+    background-color: var(--almost-transparent);
 }
 
 

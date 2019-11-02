@@ -63,7 +63,7 @@ $(function() {
 	const albumStage = "album";
     
     var stageNames = [aboutStage, musicStage, projectStage, newsStage, albumStage];
-	var bgPhotoAutors = ["Carla Bertomeu", "Yen-An Chen", "Tjeerd Postma", "Szu Yi", "Undefined"]
+	var bgPhotoAutors = ["Carla Bertomeu", "Yen-An Chen", "Tjeerd Postma", "Szu Yi", null]
     var stageHasSideInfo = {};
 	stageHasSideInfo[aboutStage] = true;
 	stageHasSideInfo[musicStage] = true;
@@ -146,7 +146,9 @@ $(function() {
 				}
                 content.removeClass("hidden");
                 button.addClass("active");
-				photoBy.text("Photo by "+window.stageInfos[i].bgAuthor);
+                if (window.stageInfos[i].bgAuthor != null)
+				    photoBy.text("Photo by "+window.stageInfos[i].bgAuthor);
+                else photoBy.text("");
             }
 			else {
 				view.addClass("hidden");
