@@ -396,6 +396,15 @@ h2 {
 	.footer-logo {
 		margin-left: 30px;
 	}
+	.album-bg {
+		background: rgb(225,239,243);
+		background: linear-gradient(120deg, rgba(225,239,243,1) 0%, rgba(203,194,210,1) 29%, rgba(224,199,166,1) 100%);
+	}
+	#album-playlist img {
+		margin: auto;
+		text-align-last: center;
+		display: block;
+	}
 
 	/*bootstrapping*/
 	.col_phone-12 {
@@ -535,6 +544,10 @@ h2 {
 	.col_desktop-3 {
 		width: 25%;
 	}
+	.album-bg {
+		background: rgb(225,239,243);
+		background: linear-gradient(120deg, rgba(225,239,243,1) 0%, rgba(227,229,239,1) 16%, rgba(203,194,210,1) 35%, rgba(255,255,255,1) 67%, rgba(224,199,166,1) 100%); 
+	}
 }
 
 #album-content {
@@ -631,8 +644,6 @@ h2 {
 }
 
 .album-bg {
-    background: rgb(225,239,243);
-    background: linear-gradient(90deg, rgba(225,239,243,1) 0%, rgba(227,229,239,1) 16%, rgba(203,194,210,1) 35%, rgba(255,255,255,1) 67%, rgba(224,199,166,1) 100%); 
     -webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
