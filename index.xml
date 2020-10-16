@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>YenTing Lo 羅妍婷</title>
+    <link>https://yentinglo.net/</link>
+    <description>Recent content on YenTing Lo 羅妍婷</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Oct 2020 13:00:25 +0530</lastBuildDate><atom:link href="https://yentinglo.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Epiphyllum</title>
+      <link>https://yentinglo.net/projects/epiphyllum/</link>
+      <pubDate>Sat, 05 Nov 2016 19:44:32 +0530</pubDate>
+      
+      <guid>https://yentinglo.net/projects/epiphyllum/</guid>
+      <description>&lt;p class=&#34;hide-inside-content&#34;&gt;
+YenTing&#39;s first singing-songwriting album featuring the Cheng string quartet. (2019) 
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Off-Score Project</title>
+      <link>https://yentinglo.net/projects/off-score/</link>
+      <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
+      
+      <guid>https://yentinglo.net/projects/off-score/</guid>
+      <description>&lt;p class=&#34;hide-inside-content&#34;&gt;
+A music album that you can interact with, contains 5 song/game tracks. (2020)
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The 13th Heron</title>
+      <link>https://yentinglo.net/projects/the-13th-heron/</link>
+      <pubDate>Sat, 05 Nov 2016 19:44:32 +0530</pubDate>
+      
+      <guid>https://yentinglo.net/projects/the-13th-heron/</guid>
+      <description>&lt;p class=&#34;hide-inside-content&#34;&gt;
+An album of space journey in collaboration with Mateusz Pulawski. (2020) 
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Arrangements</title>
+      <link>https://yentinglo.net/projects/arrangement/</link>
+      <pubDate>Sat, 05 Nov 2016 19:44:32 +0530</pubDate>
+      
+      <guid>https://yentinglo.net/projects/arrangement/</guid>
+      <description>&lt;p class=&#34;hide-inside-content&#34;&gt;
+YenTing arranges and performs in all kinds of line-ups from small to big bands. 
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+/* your styles go here */
+body {
+  background-color: #F3F1EF;
+}
+.credit {
+font-size: 8pt;
+}
+.fa.fa-bandcamp {
+	width: 15px;
+	height: 40px;
+	fill: #999999;
+	text-align: center;
+	content: url("./svg/bandcamp.svg");
+	vertical-align: middle;
+}
+.fa.fa-discord {
+	width: 15px;
+	height: 40px;
+	fill: #999999;
+	text-align: center;
+	content: url("./svg/discord.svg");
+	vertical-align: middle;
+}
+.fa.fa-discord:hover {
+  color: #379392;
+  border-color: #379392;
+}
+
+.content-column-content .hide-inside-content {
+	display: none;
+}
