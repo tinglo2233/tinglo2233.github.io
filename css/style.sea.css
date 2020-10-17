@@ -385,7 +385,7 @@ SIDEBAR + RIGHT COLUMN
   padding-top: 40px;
 }
 .content-column.white-background {
-  background: #fff;
+  //background: #fff;
   min-height: 100vh;
 }
 .grid {
