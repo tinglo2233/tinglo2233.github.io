@@ -41,3 +41,19 @@ font-size: 8pt;
     color: #555555;
     
 }
+
+h5 sup {
+    font-weight: normal;
+    color: #555555;
+}
+
+#credits-text {
+    color: #555555;
+    font-size: 12px;
+    line-height: 2;
+}
+
+h6 sup {
+    font-weight: normal;
+    color: #555555;
+}
