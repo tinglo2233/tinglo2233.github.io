@@ -57,3 +57,7 @@ h6 sup {
     font-weight: normal;
     color: #555555;
 }
+
+.list-no-margin {
+    margin-top: -20px;
+}
