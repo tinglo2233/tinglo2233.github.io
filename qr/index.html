@@ -18,6 +18,14 @@
         height: 10vh;
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
       }
+      
+      #tutorial {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 30vh;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+      }
 
       #timeline {
         background-color: rgba(0,0,0,0.3);
@@ -35,14 +43,23 @@
       }
 
       #song-title {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
+
+      .text-title {
         margin: 15px;
         font-size: 3vh;
         font-family: transcity;
         color: white;
+        text-align: center;
+      }
 
-        -webkit-user-select: none; /* Safari */
-        -ms-user-select: none; /* IE 10 and IE 11 */
-        user-select: none; /* Standard syntax */
+      #tutorial .text-title {
+        font-size: 2.5vh;
+        line-height: 4vh;
+        margin-top: 30px;
       }
 
       #play-head {
@@ -126,8 +143,16 @@
       </a-entity>
     </a-scene>
 
+    <div id="tutorial" class="fadeIn">
+      <div class="text-title">
+        請將相機對準明信片正面<br>
+        ポストカードをかざしてみましょう<br>
+        Aim to the front of the postcard
+      </div>
+    </div>
+
     <div id="info" class="fadeOut">
-      <div id="song-title">
+      <div id="song-title" class="text-title">
         YenTing Lo & Yoko Suziki - White Horse
       </div>
       <div id="timeline">
@@ -167,6 +192,7 @@
         playhead.style.left = "0%";
         var info = document.getElementById("info");
         var timeline = document.getElementById("timeline");
+        var tutorial = document.getElementById("tutorial");
 
         function processClientPointer(clientX) {
           let wantedPlayhead = Math.max(0, Math.min((clientX - Math.abs(timeline.offsetLeft))/timeline.offsetWidth, 1.0));
@@ -245,11 +271,7 @@
         }
 
         // Songs registration
-        // registerSong("thirteen", "song01", "13");
-        // registerSong("fourteen", "ridge-audio", "14");
-        // registerSong("fiveteen", "ferran-audio", "15");
-
-        for (let i = 0; i <  8; ++i)
+        for (let i = 0; i < 8; ++i)
             registerAlbumSong(i);
 
         let showingInfo = false;
@@ -266,10 +288,14 @@
               info.classList.remove("fadeOut");
               info.classList.add("fadeIn");
               showingInfo = true;
+              tutorial.classList.remove("fadeIn");
+              tutorial.classList.add("fadeOut");
             }
             else if (showingInfo && currentlyPlayingAudio.paused && factor >= 100) {
               info.classList.remove("fadeIn");
               info.classList.add("fadeOut");
+              tutorial.classList.remove("fadeOut");
+              tutorial.classList.add("fadeIn");
               showingInfo = false;
             }
           }
