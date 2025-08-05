@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="libs/aframe.min.js"></script> <!-- https://aframe.io/releases/1.6.0/aframe.min.js -->
     <script src="libs/mindar-image-aframe.prod.js"></script> <!-- https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js -->
@@ -27,9 +28,9 @@
         margin: 10px 20px 10px 20px;
         height: calc(5vh - 30px);
         width: calc(100vw - 40px);
-        border: 3px;
+        /*border: 3px;
         border-color: rgba(255,255,255,0.5);
-        border-style: solid;
+        border-style: solid;*/
         cursor: col-resize;
       }
 
@@ -71,23 +72,57 @@
     </style>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets/photos_postcards_targets_bnw.mind; filterMinCF:0.001; filterBeta: 0;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./targets/targets_colored_original.mind; filterMinCF:0.001; filterBeta: 0;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <img id="landforms_cover" src="./targets/gray_smallest_bnw.jpg" />
-        <img id="offscore_cover" src="./targets/yellow_post_smaller_bnw.jpg" />
-        <!--<a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>-->
+        <!--<img id="thirteen_img" src="./targets/13_colored.jpg" />
+        <img id="fourteen_img" src="./targets/14_colored.jpg" />
+        <img id="fiveteen_img" src="./targets/15_colored.jpg" />
+        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>-->
+        <img id="song01_img" src="./targets/arimg/song01.png" />
+        <img id="song02_img" src="./targets/arimg/song02.png" />
+        <img id="song03_img" src="./targets/arimg/song03.png" />
+        <img id="song04_img" src="./targets/arimg/song04.png" />
+        <img id="song05_img" src="./targets/arimg/song05.png" />
+        <img id="song06_img" src="./targets/arimg/song06.png" />
+        <img id="song07_img" src="./targets/arimg/song07.png" />
+        <img id="song08_img" src="./targets/arimg/song08.png" />
         
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity id="landforms" mindar-image-target="targetIndex: 0">
-        <a-plane src="#landforms_cover" opacity="1" position="0 0 0.1" height="0.97656" width="1" rotation="0 0 0"></a-plane>
-        <!--<a-plane color="green" opacity="0.5" position="0 -1 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
-        <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>-->
+      <!--<a-entity id="thirteen" mindar-image-target="targetIndex: 0">
+        <a-plane src="#thirteen_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
       </a-entity>
-      <a-entity id="offscore" mindar-image-target="targetIndex: 1">
-        <a-plane src="#offscore_cover" opacity="1" position="0 0 0.1" height="0.89285" width="1" rotation="0 0 0"></a-plane>
+      <a-entity id="fourteen" mindar-image-target="targetIndex: 2">
+        <a-plane src="#fourteen_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+      <a-entity id="fiveteen" mindar-image-target="targetIndex: 1">
+        <a-plane src="#fiveteen_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>-->
+
+      <a-entity id="entity01" mindar-image-target="targetIndex: 0">
+        <a-plane src="#song01_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+      <a-entity id="entity02" mindar-image-target="targetIndex: 1">
+        <a-plane src="#song02_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+      <a-entity id="entity03" mindar-image-target="targetIndex: 2">
+        <a-plane src="#song03_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+      <a-entity id="entity04" mindar-image-target="targetIndex: 3">
+        <a-plane src="#song04_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+      <a-entity id="entity05" mindar-image-target="targetIndex: 4">
+        <a-plane src="#song05_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+      <a-entity id="entity06" mindar-image-target="targetIndex: 5">
+        <a-plane src="#song06_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+      <a-entity id="entity07" mindar-image-target="targetIndex: 6">
+        <a-plane src="#song07_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+      <a-entity id="entity08" mindar-image-target="targetIndex: 7">
+        <a-plane src="#song08_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
       </a-entity>
     </a-scene>
 
@@ -96,17 +131,35 @@
         YenTing Lo & Yoko Suziki - White Horse
       </div>
       <div id="timeline">
-        <div id="play-head" draggable="true">
+        <div id="play-head"> <!--draggable="true"-->
 
         </div>
       </div>
     </div>
 
-    <audio id="ridge-audio">
-        <source src="./songs/02 Ridge.mp3" type="audio/mpeg">
+    <audio id="song01">
+        <source src="./songs/01 A Winter Song.mp3" type="audio/mpeg">
     </audio>
-    <audio id="cicada-audio">
-        <source src="./songs/Yenting - Off-score - Cicada.mp3" type="audio/mpeg">
+    <audio id="song02">
+        <source src="./songs/02 The Forest.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="song03">
+        <source src="./songs/03 White Horse Past Morning.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="song04">
+        <source src="./songs/04 Today_s My Day.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="song05">
+        <source src="./songs/05 Dunes.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="song06">
+        <source src="./songs/06 Tunnelbanan.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="song07">
+        <source src="./songs/07 Paths Intertwined.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="song08">
+        <source src="./songs/08 冬の歌 fuyu no uta.mp3" type="audio/mpeg">
     </audio>
 
     <script>
@@ -175,9 +228,29 @@
           });
         }
 
+        var albumSongTitles = [
+          "A Winter Song",
+          "The Forest",
+          "White Horse Past Morning",
+          "Today's My Day",
+          "Dunes",
+          "Tunnelbanan",
+          "Paths Intertwined",
+          "冬の歌 fuyu no uta"
+        ];
+
+        function registerAlbumSong(it) {
+          let id = ""+(it + 1);
+          registerSong("entity0"+id, "song0"+id, albumSongTitles[it]);
+        }
+
         // Songs registration
-        registerSong("landforms", "cicada-audio", "YenTing Lo - Cicada & Banyan Tree");
-        registerSong("offscore", "ridge-audio", "YenTing Lo - Ridge");
+        // registerSong("thirteen", "song01", "13");
+        // registerSong("fourteen", "ridge-audio", "14");
+        // registerSong("fiveteen", "ferran-audio", "15");
+
+        for (let i = 0; i <  8; ++i)
+            registerAlbumSong(i);
 
         let showingInfo = false;
 
@@ -204,6 +277,9 @@
           requestAnimationFrame(animatePlayhead);
         }
         requestAnimationFrame(animatePlayhead);
+
+        // Debug
+        //OnTargetFound(document.getElementById("song08"), albumSongTitles[7]);
     </script>
   </body>
 </html>
