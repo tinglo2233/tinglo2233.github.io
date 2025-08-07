@@ -89,7 +89,7 @@
     </style>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets/targets_colored_original.mind; filterMinCF:0.001; filterBeta: 0;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./targets/targets_06_only.mind; filterMinCF:0.001; filterBeta: 0;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <!--<img id="thirteen_img" src="./targets/13_colored.jpg" />
         <img id="fourteen_img" src="./targets/14_colored.jpg" />
@@ -100,7 +100,7 @@
         <img id="song03_img" src="./targets/arimg/song03.png" />
         <img id="song04_img" src="./targets/arimg/song04.png" />
         <img id="song05_img" src="./targets/arimg/song05.png" />
-        <img id="song06_img" src="./targets/arimg/song06.png" />
+        <img id="song06_img" src="./virtual/song06_tunnelbanan.png" />
         <img id="song07_img" src="./targets/arimg/song07.png" />
         <img id="song08_img" src="./targets/arimg/song08.png" />
         
@@ -117,7 +117,7 @@
         <a-plane src="#fiveteen_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
       </a-entity>-->
 
-      <a-entity id="entity01" mindar-image-target="targetIndex: 0">
+      <a-entity id="entity01" mindar-image-target="targetIndex: 5">
         <a-plane src="#song01_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
       </a-entity>
       <a-entity id="entity02" mindar-image-target="targetIndex: 1">
@@ -132,8 +132,9 @@
       <a-entity id="entity05" mindar-image-target="targetIndex: 4">
         <a-plane src="#song05_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
       </a-entity>
-      <a-entity id="entity06" mindar-image-target="targetIndex: 5">
-        <a-plane src="#song06_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
+      <a-entity id="entity06" mindar-image-target="targetIndex: 0">
+        <!-- Image has a 0.5446 AR-->
+        <a-plane src="#song06_img" opacity="1" transparent="true" position="0.248 -0.32 0.1" height="2.8461" width="1.55" rotation="0 0 0"></a-plane>
       </a-entity>
       <a-entity id="entity07" mindar-image-target="targetIndex: 6">
         <a-plane src="#song07_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
