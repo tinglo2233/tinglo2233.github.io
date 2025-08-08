@@ -89,7 +89,7 @@
     </style>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets/targets_postcards.mind; filterMinCF:0.001; filterBeta: 0;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./targets/targets_postcards_envelope.mind; filterMinCF:0.001; filterBeta: 0;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <!--<img id="thirteen_img" src="./targets/13_colored.jpg" />
         <img id="fourteen_img" src="./targets/14_colored.jpg" />
@@ -121,30 +121,30 @@
         <!-- A winter song, AR 0.8451-->
         <a-plane src="#song01_img" opacity="1" transparent="true" position="0.03 0.155 0" height="1.7157" width="1.45" rotation="0 0 0"></a-plane>
       </a-entity>
-      <!-- <a-entity id="entity02" mindar-image-target="targetIndex: 7">
-        <a-plane src="#song02_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane>
-      </a-entity> -->
-      <a-entity id="entity03" mindar-image-target="targetIndex: 4">
+      <a-entity id="entity02" mindar-image-target="targetIndex: 1">
+        <!-- <a-plane src="#song02_img" opacity="1" position="0 0 0.1" height="1" width="1" rotation="0 0 0"></a-plane> -->
+      </a-entity>
+      <a-entity id="entity03" mindar-image-target="targetIndex: 5">
         <!-- White Horse, AR 0.5875 -->
         <a-plane src="#song03_img" opacity="1" transparent="true" position="0.085 -0.19 0" height="2.5191" width="1.48" rotation="0 0 0"></a-plane>
       </a-entity>
-      <a-entity id="entity04" mindar-image-target="targetIndex: 2">
+      <a-entity id="entity04" mindar-image-target="targetIndex: 3">
         <!-- Today is my day, AR 0.34131 -->
         <a-plane src="#song04_img" opacity="1" transparent="true" position="0 -0.025 0" height="2.9298" width="1" rotation="0 0 0"></a-plane>
       </a-entity>
-      <a-entity id="entity05" mindar-image-target="targetIndex: 6">
+      <a-entity id="entity05" mindar-image-target="targetIndex: 7">
         <!-- Dunes, AR 0.42322 -->
         <a-plane src="#song05_img" opacity="1" transparent="true" position="0 0.625 0" height="2.36281" width="1" rotation="0 0 0"></a-plane>
       </a-entity>
-      <a-entity id="entity06" mindar-image-target="targetIndex: 3">
+      <a-entity id="entity06" mindar-image-target="targetIndex: 4">
         <!-- Tunnelbanan, AR 0.5446 -->
         <a-plane src="#song06_img" opacity="1" transparent="true" position="0.248 -0.32 0" height="2.8461" width="1.55" rotation="0 0 0"></a-plane>
       </a-entity>
-      <a-entity id="entity07" mindar-image-target="targetIndex: 1">
+      <a-entity id="entity07" mindar-image-target="targetIndex: 2">
         <!-- Paths intertwined, AR 0.684451 -->
         <a-plane src="#song07_img" opacity="1" transparent="true" position="0 -0.87 0" height="1.168819" width="0.8" rotation="0 0 0"></a-plane>
       </a-entity>
-      <a-entity id="entity08" mindar-image-target="targetIndex: 5">
+      <a-entity id="entity08" mindar-image-target="targetIndex: 6">
         <!-- Fuyu no uta, AR 0.5122 -->
         <a-plane src="#song08_img" opacity="1" transparent="true" position="0.1 0.95 0" height="1.3666" width="0.7" rotation="0 0 0"></a-plane>
       </a-entity>
@@ -172,9 +172,9 @@
     <audio id="song01" title="A Winter Song - YenTing Lo & Yoko Suzuki">
         <source src="./songs/01 A Winter Song.mp3" type="audio/mpeg">
     </audio>
-    <!-- <audio id="song02">
+    <audio id="song02">
         <source src="./songs/02 The Forest.mp3" type="audio/mpeg">
-    </audio> -->
+    </audio>
     <audio id="song03" title="White Horse Past Morning - YenTing Lo & Yoko Suzuki">
         <source src="./songs/03 White Horse Past Morning.mp3" type="audio/mpeg">
     </audio>
@@ -279,7 +279,7 @@
 
         // Songs registration
         for (let i = 0; i < 8; ++i) {
-          if (i == 1) continue; // We have no forest song
+          //if (i == 1) continue; // We have no forest song
           registerAlbumSong(i);
         }
 
