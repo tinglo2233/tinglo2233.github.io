@@ -294,15 +294,15 @@
 
 
         function tryPlayAudio(audio) {
-          try {
-            audio.play();
-            playDropdown.classList.remove("fadeIn");
-            playDropdown.classList.add("fadeOut");
-          }
-          catch (error) {
+          audio.play()
+          .then(() => {
             playDropdown.classList.remove("fadeOut");
             playDropdown.classList.add("fadeIn");
-          }
+          })
+          .catch(error => {
+            playDropdown.classList.remove("fadeIn");
+            playDropdown.classList.add("fadeOut");
+          });
         }
 
         function startEverything() {
