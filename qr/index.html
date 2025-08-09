@@ -100,7 +100,7 @@
         background-size: 400% 400%;
       }
 
-      #start-text {
+      .start-text {
         pointer-events: none;
         text-align: center;
         
@@ -112,6 +112,12 @@
       .nodisplay {
         display: none;
       }
+
+      .mindar-ui-overlay {
+        z-index: -1;
+      }
+
+      
 
 
 
@@ -210,10 +216,15 @@
     </div>
 
     <div id="start-div" class="fadeIn">
-      <div id="start-text" class="text-title">
+      <div id="start-ar-text" class="text-title start-text">
         點一下螢幕，開啟相機<br>
         画面をタップして、カメラをオンにします<br>
         Tap the screen to turn your phone camera on
+      </div>
+      <div id="start-audio-text" class="text-title start-text fadeOut">
+        開啟聲音，點一下螢幕<br>
+        サウンドをオンにする、画面をタップして<br>
+        Turn on sound and tap to begin
       </div>
     </div>
 
@@ -241,19 +252,40 @@
     <audio id="song08" title="冬の歌 fuyu no uta - YenTing Lo & Yoko Suzuki">
         <source src="./songs/08 冬の歌 fuyu no uta.mp3" type="audio/mpeg">
     </audio>
+    <audio id="startup-audio">
+        <source src="./songs/intro.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
         // AR loading
         
         let startDiv = document.getElementById("start-div");
+        let startArText = document.getElementById("start-ar-text");
+        let startAudioText = document.getElementById("start-audio-text");
         let arSystem;
-        let started = false;
+        let startedAR = false;
+        let startedAudio = false;
         let firstScan = true;
+        let startupAudio = document.getElementById("startup-audio");
         function startEverything() {
-          if (!started)
+          if (!startedAR)
           {
             arSystem.start();
-            started = true;
+            startedAR = true;
+            startArText.classList.add("fadeOut");
+            startAudioText.classList.remove("fadeOut");
+            startAudioText.classList.add("fadeIn");
+
+            // let scanners = document.getElementsByClassName("mindar-ui-scanning")[0];
+            // for (let i = 0; i < scanners.length; ++i) {
+            //   scanners[i].style.removeProperty("z-index");
+            //   scanners[i].style.zIndex = -1;
+            // }
+          }
+          else if (!startedAudio)
+          {
+            startupAudio.play();
+            startedAudio = true;
             startDiv.classList.add("fadeOut");
           }
         }
