@@ -19,6 +19,15 @@
         height: 10vh;
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
       }
+
+      #play-dropdown {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 10vh;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+        pointer-events: none;
+      }
       
       #tutorial {
         position: absolute;
@@ -115,6 +124,16 @@
 
       .mindar-ui-overlay {
         z-index: -1;
+      }
+
+      #play-button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: block;
+        height: calc(100% - 30px);
+        pointer-events: none;
       }
 
       
@@ -227,6 +246,11 @@
         Turn on sound and tap to begin
       </div>
     </div>
+    <div id="play-dropdown" class="fadeOut">
+      <img src="play-button.png" id="play-button">
+
+      </img>
+    </div>
 
     <audio id="song01" title="A Winter Song - YenTing Lo & Yoko Suzuki">
         <source src="./songs/01 A Winter Song.mp3" type="audio/mpeg">
@@ -267,6 +291,20 @@
         let startedAudio = false;
         let firstScan = true;
         let startupAudio = document.getElementById("startup-audio");
+
+
+        function tryPlayAudio(audio) {
+          try {
+            audio.play();
+            playDropdown.classList.remove("fadeIn");
+            playDropdown.classList.add("fadeOut");
+          }
+          catch (error) {
+            playDropdown.classList.remove("fadeOut");
+            playDropdown.classList.add("fadeIn");
+          }
+        }
+
         function startEverything() {
           if (!startedAR)
           {
@@ -287,6 +325,12 @@
             startupAudio.play();
             startedAudio = true;
             startDiv.classList.add("fadeOut");
+          }
+          else if (startedAudio && startedAR) {
+            if (currentlyPlayingAudio != null && currentlyPlayingAudio.paused)
+            {
+              tryPlayAudio(currentlyPlayingAudio);
+            }
           }
         }
 
@@ -340,12 +384,31 @@
           console.log(drag);
         }
 
+        let playDropdown = document.getElementById("play-dropdown");
+
+        function tryPlayAudio(audio) {
+          try {
+            audio.play();
+            playDropdown.classList.remove("fadeIn");
+            playDropdown.classList.add("fadeOut");
+          }
+          catch (error) {
+            playDropdown.classList.remove("fadeOut");
+            playDropdown.classList.add("fadeIn");
+          }
+        }
+
         function OnTargetFound(audioPlayback, title)
         {
+          if (firstScan) {
+            firstScan = false;
+            startDiv.classList.add("nodisplay");
+          }
+
           if (audioPlayback == currentlyPlayingAudio) {
             if (currentlyPlayingAudio.paused) {
               currentlyPlayingAudio.currentTime = 0;
-              currentlyPlayingAudio.play();
+              tryPlayAudio(currentlyPlayingAudio);
             }
             return;
           }
@@ -354,13 +417,8 @@
             currentlyPlayingAudio.currentTime = 0;
           }
           currentlyPlayingAudio = audioPlayback;
-          audioPlayback.play();
+          tryPlayAudio(audioPlayback);
           songTitle.innerText = title;
-
-          if (firstScan) {
-            firstScan = false;
-            startDiv.classList.add("nodisplay");
-          }
         }
 
         function registerSong(id, audioId, title) {
@@ -417,6 +475,7 @@
               tutorial.classList.remove("fadeOut");
               tutorial.classList.add("fadeIn");
               showingInfo = false;
+              playDropdown.classList.add("fadeOut");
             }
           }
 
