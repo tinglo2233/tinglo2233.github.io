@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script> <!-- libs/aframe.min.js -->
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script> <!-- libs/mindar-image-aframe.prod.js -->
+    <link rel="shortcut icon" href="https://yentinglo.net/img/favicon.png">
 
     <style>
       @font-face {
@@ -86,10 +87,49 @@
         opacity: 0;
         transition: opacity 2s linear;
       }
+
+      #start-div {
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: linear-gradient(45deg, #edc1b6, #69a3ae, #088695); /*#feebff*/
+        animation: gradient 15s ease infinite;
+        background-size: 400% 400%;
+      }
+
+      #start-text {
+        pointer-events: none;
+        text-align: center;
+        
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .nodisplay {
+        display: none;
+      }
+
+
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
     </style>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets/targets_postcards_envelope.mind; filterMinCF:0.001; filterBeta: 0;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="autoStart: false; imageTargetSrc: ./targets/targets_postcards_envelope.mind; filterMinCF:0.001; filterBeta: 0; missTolerance: 10;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <!--<img id="thirteen_img" src="./targets/13_colored.jpg" />
         <img id="fourteen_img" src="./targets/14_colored.jpg" />
@@ -169,6 +209,14 @@
       </div>
     </div>
 
+    <div id="start-div" class="fadeIn">
+      <div id="start-text" class="text-title">
+        點一下螢幕，開啟相機<br>
+        画面をタップして、カメラをオンにします<br>
+        Tap the screen to turn your phone camera on
+      </div>
+    </div>
+
     <audio id="song01" title="A Winter Song - YenTing Lo & Yoko Suzuki">
         <source src="./songs/01 A Winter Song.mp3" type="audio/mpeg">
     </audio>
@@ -195,6 +243,32 @@
     </audio>
 
     <script>
+        // AR loading
+        
+        let startDiv = document.getElementById("start-div");
+        let arSystem;
+        let started = false;
+        let firstScan = true;
+        function startEverything() {
+          if (!started)
+          {
+            arSystem.start();
+            started = true;
+            startDiv.classList.add("fadeOut");
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+	          const sceneEl = document.querySelector('a-scene');
+            sceneEl.addEventListener('loaded', function () {
+              arSystem = sceneEl.systems["mindar-image-system"];
+
+              let canvas = document.querySelector('canvas');
+              canvas.addEventListener("pointerdown", startEverything);
+            });
+        });
+
+        //
         var playhead = document.getElementById("play-head");
         playhead.style.left = "0%";
         var info = document.getElementById("info");
@@ -250,6 +324,11 @@
           currentlyPlayingAudio = audioPlayback;
           audioPlayback.play();
           songTitle.innerText = title;
+
+          if (firstScan) {
+            firstScan = false;
+            startDiv.classList.add("nodisplay");
+          }
         }
 
         function registerSong(id, audioId, title) {
