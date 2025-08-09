@@ -24,7 +24,7 @@
         position: absolute;
         top: 0;
         width: 100%;
-        height: 10vh;
+        height: 20vh;
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
         pointer-events: none;
       }
@@ -44,7 +44,7 @@
         left: 0;
         right: 0;
         margin: 10px 20px 10px 20px;
-        height: calc(5vh - 30px);
+        height: 1.5vh;/*calc(5vh - 30px);*/
         width: calc(100vw - 40px);
         /*border: 3px;
         border-color: rgba(255,255,255,0.5);
@@ -129,10 +129,10 @@
       #play-button {
         margin-left: auto;
         margin-right: auto;
-        margin-top: 15px;
+        margin-top: 10vh;
         margin-bottom: 15px;
         display: block;
-        height: calc(100% - 30px);
+        height: calc(10vh - 15px);
         pointer-events: none;
       }
 
@@ -296,12 +296,14 @@
         async function tryPlayAudio(audio) {
           await audio.play()
           .then(() => {
-            playDropdown.classList.remove("fadeOut");
-            playDropdown.classList.add("fadeIn");
+            playDropdown.classList.add("fadeOut");
+            playDropdown.classList.remove("fadeIn");
+            // playDropdown.classList.remove("fadeOut");
+            // playDropdown.classList.add("fadeIn");
           })
           .catch(error => {
-            playDropdown.classList.remove("fadeIn");
-            playDropdown.classList.add("fadeOut");
+            playDropdown.classList.remove("fadeOut");
+            playDropdown.classList.add("fadeIn");
           });
         }
 
@@ -386,17 +388,17 @@
 
         let playDropdown = document.getElementById("play-dropdown");
 
-        function tryPlayAudio(audio) {
-          try {
-            audio.play();
-            playDropdown.classList.remove("fadeIn");
-            playDropdown.classList.add("fadeOut");
-          }
-          catch (error) {
-            playDropdown.classList.remove("fadeOut");
-            playDropdown.classList.add("fadeIn");
-          }
-        }
+        // function tryPlayAudio(audio) {
+        //   try {
+        //     audio.play();
+        //     playDropdown.classList.remove("fadeIn");
+        //     playDropdown.classList.add("fadeOut");
+        //   }
+        //   catch (error) {
+        //     playDropdown.classList.remove("fadeOut");
+        //     playDropdown.classList.add("fadeIn");
+        //   }
+        // }
 
         function OnTargetFound(audioPlayback, title)
         {
