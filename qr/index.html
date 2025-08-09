@@ -293,8 +293,8 @@
         let startupAudio = document.getElementById("startup-audio");
 
 
-        function tryPlayAudio(audio) {
-          audio.play()
+        async function tryPlayAudio(audio) {
+          await audio.play()
           .then(() => {
             playDropdown.classList.remove("fadeOut");
             playDropdown.classList.add("fadeIn");
