@@ -193,7 +193,7 @@
         background: #fff;
       }
       .loader::before {
-        box-shadow: 25px 0;
+        box-shadow: 25px 0 white;
         animation: l8-1 1s infinite linear;
       }
       .loader::after {
@@ -203,6 +203,10 @@
 
       #loader-holder{
         margin-top: 30px;
+      }
+
+      #loader-holder-play{
+        margin-top: 50vh;
       }
 
       @keyframes l8-1 {
@@ -314,6 +318,7 @@
       <img src="play-button.png" id="play-button">
 
       </img>
+      <div id="loader-holder-play" class="fadeOut"><div class="loader"></div></div>
     </div>
 
     <audio preload="none" id="song01" title="A Winter Song - YenTing Lo & Yoko Suzuki">
@@ -359,19 +364,41 @@
         let startupAudio = document.getElementById("startup-audio");
 
         let playDropdown = document.getElementById("play-dropdown");
+        let playLoading = document.getElementById("loader-holder-play");
+        let playButton = document.getElementById("play-button");
 
 
-        async function tryPlayAudio(audio) {
+        function fadeOut(elem) {
+          elem.classList.remove("fadeIn");
+          elem.classList.add("fadeOut");
+        }
+
+        function fadeIn(elem) {
+          elem.classList.remove("fadeOut");
+          elem.classList.add("fadeIn");
+        }
+
+        async function tryPlayAudio(audio)
+        {
+
+          fadeIn(playLoading);
+          fadeOut(playButton);
+
+          /// COMMENT OUT
+          //await new Promise (pr => setTimeout(pr, 3000));
+
           await audio.play()
           .then(() => {
-            playDropdown.classList.add("fadeOut");
-            playDropdown.classList.remove("fadeIn");
+            fadeOut(playDropdown);
+            fadeOut(playLoading);
+            fadeIn(playButton);
             // playDropdown.classList.remove("fadeOut");
             // playDropdown.classList.add("fadeIn");
           })
           .catch(error => {
-            playDropdown.classList.remove("fadeOut");
-            playDropdown.classList.add("fadeIn");
+            fadeIn(playButton);
+            fadeOut(playLoading);
+            fadeIn(playDropdown);
           });
         }
 
@@ -380,10 +407,9 @@
           {
             arSystem.start();
             startedAR = true;
-            startArText.classList.add("fadeOut");
+            fadeOut(startArText);
             // Second loading
-            loadingText.classList.remove("fadeOut");
-            loadingText.classList.add("fadeIn");
+            fadeIn(loadingText);
 
             
 
@@ -400,7 +426,7 @@
           {
             startupAudio.play();
             startedAudio = true;
-            startDiv.classList.add("fadeOut");
+            fadeOut(startDiv);
           }
           else if (startedAudio && startedAR) {
             if (currentlyPlayingAudio != null && currentlyPlayingAudio.paused)
@@ -417,19 +443,14 @@
 
               let canvas = document.querySelector('canvas');
               canvas.addEventListener("pointerdown", startEverything);
-              loadingText.classList.remove("fadeIn");
-              loadingText.classList.add("fadeOut");
-              startArText.classList.remove("fadeOut");
-              startArText.classList.add("fadeIn");
+              fadeOut(loadingText);
+              fadeIn(startArText);
             });
             sceneEl.addEventListener('arReady', function() {
-              loadingText.classList.remove("fadeIn");
-              loadingText.classList.add("fadeOut");
+              fadeOut(loadingText);
+              fadeIn(startAudioText);
 
               console.log("AR READY");
-
-              startAudioText.classList.remove("fadeOut");
-              startAudioText.classList.add("fadeIn");
 
               arIsReady = true;
 
@@ -511,6 +532,7 @@
           }
           currentlyPlayingAudio = audioPlayback;
           tryPlayAudio(audioPlayback);
+          //fadeIn(playDropdown);
           songTitle.innerText = title;
         }
 
@@ -556,19 +578,15 @@
             playhead.style.left = factor+"%";
 
             if (!showingInfo && !currentlyPlayingAudio.paused) {
-              info.classList.remove("fadeOut");
-              info.classList.add("fadeIn");
+              fadeIn(info);
               showingInfo = true;
-              tutorial.classList.remove("fadeIn");
-              tutorial.classList.add("fadeOut");
+              fadeOut(tutorial);
             }
             else if (showingInfo && currentlyPlayingAudio.paused && factor >= 100) {
-              info.classList.remove("fadeIn");
-              info.classList.add("fadeOut");
-              tutorial.classList.remove("fadeOut");
-              tutorial.classList.add("fadeIn");
+              fadeOut(info);
+              fadeIn(tutorial);
               showingInfo = false;
-              playDropdown.classList.add("fadeOut");
+              fadeOut(playDropdown);
             }
           }
 
